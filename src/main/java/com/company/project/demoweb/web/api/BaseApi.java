@@ -1,4 +1,4 @@
-package com.company.project.demoweb.api;
+package com.company.project.demoweb.web.api;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 

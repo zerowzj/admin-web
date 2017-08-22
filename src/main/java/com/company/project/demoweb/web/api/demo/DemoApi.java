@@ -1,9 +1,8 @@
-package com.company.project.demoweb.api.demo;
+package com.company.project.demoweb.web.api.demo;
 
-import com.company.project.demoweb.api.BaseApi;
+import com.company.project.demoweb.web.api.BaseApi;
 import com.company.project.demoweb.support.action.ActionExecutor;
 import com.company.project.demoweb.support.annotation.Action;
-import com.company.project.demoweb.support.annotation.Api;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 

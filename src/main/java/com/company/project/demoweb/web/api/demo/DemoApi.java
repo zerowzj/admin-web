@@ -1,6 +1,6 @@
 package com.company.project.demoweb.web.api.demo;
 
-import com.company.project.demoweb.web.api.BaseApi;
+import com.company.project.demoweb.support.api.BaseApi;
 import com.company.project.demoweb.support.action.ActionExecutor;
 import com.company.project.demoweb.support.annotation.Action;
 import org.springframework.stereotype.Controller;
@@ -13,7 +13,7 @@ import java.util.Map;
 /**
  * Created by wangzhj on 2017/8/10.
  */
-@Controller()
+@Controller
 @RequestMapping("/demo")
 public class DemoApi extends BaseApi {
 

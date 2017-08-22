@@ -13,7 +13,6 @@
         <div class="layui-logo">管理平台</div>
         <!-- 头部区域（可配合layui已有的水平导航） -->
         <ul class="layui-nav layui-layout-left">
-
         </ul>
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
@@ -33,20 +32,24 @@
     <div class="layui-side layui-bg-black">
         <div class="layui-side-scroll">
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-            <ul class="layui-nav layui-nav-tree" lay-filter="test">
-                <li class="layui-nav-item layui-nav-itemed">
-                    <a class="" href="javascript:;">权限管理</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">角色列表</a></dd>
-                        <dd><a href="javascript:;">列表三</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item layui-nav-itemed">
-                    <a href="javascript:;">安全管理</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">修改密码</a></dd>
-                    </dl>
-                </li>
+            {{for menuEOLt}}
+            < class="layui-nav layui-nav-tree" lay-filter="test">
+            <li class="layui-nav-item layui-nav-itemed">
+                <a class="" href="javascript:;">{{:pfName}}</a>
+                <%--{{for :children}}--%>
+                <%--<dl class="layui-nav-child">--%>
+                    <%--<dd><a href="javascript:;">角色列表</a></dd>--%>
+                    <%--<dd><a href="javascript:;">列表三</a></dd>--%>
+                <%--</dl>--%>
+                <%--{{/for}}--%>
+            </li>
+            {{/for}}
+            <li class="layui-nav-item layui-nav-itemed">
+                <a href="javascript:;">安全管理</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;">修改密码</a></dd>
+                </dl>
+            </li>
             </ul>
         </div>
     </div>
@@ -61,7 +64,9 @@
         © layui.com - 底部固定区域
     </div>
 </div>
-<script src="/static/layui/layui.js"></script>
+<script type="text/javascript" src="/static/layui/layui.js"></script>
+<script type="text/javascript" src="/static/jsrender/jsrender.min.js"></script>
+<script type="text/javascript" src="/static/jsviews/jsviews.min.js"></script>
 <script>
     //JavaScript代码区域
     layui.use('element', function () {

@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
- * Created by wangzhj on 2017/8/11.
+ *
  */
 public class JsonUtil {
 

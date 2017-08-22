@@ -1,4 +1,4 @@
-package com.company.project.demoweb.web.controller.demo;
+package com.company.project.demoweb.web.controller.role;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Created by wangzhj on 2017/8/18.
  */
 @Controller
-@RequestMapping("/demo")
-public class DemoController {
+@RequestMapping("/role")
+public class RoleController {
 
-    @RequestMapping("/to_add")
+    @RequestMapping("/list")
     public String tt(){
-        return "/demo/add";
+        return "/role/list";
     }
 }

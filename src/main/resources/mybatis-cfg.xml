@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- ==================== -->
+    <!--        别名           -->
+    <!-- ==================== -->
+    <typeAliases>
+        <!-- 功能 -->
+        <typeAlias type="com.company.project.demoweb.dao.popedomfunction.PopedomFunctionEO" alias="PopedomFunctionEO"/>
+        <typeAlias type="com.company.project.demoweb.dao.popedomrole.PopedomRoleEO" alias="PopedomRoleEO"/>
+    </typeAliases>
+    <!-- ==================== -->
+    <!--        插件           -->
+    <!-- ==================== -->
+    <plugins>
+        <plugin interceptor="com.github.miemiedev.mybatis.paginator.OffsetLimitInterceptor">
+            <property name="dialectClass" value="com.github.miemiedev.mybatis.paginator.dialect.MySQLDialect"/>
+        </plugin>
+    </plugins>
+    <!-- ==================== -->
+    <!--        映射           -->
+    <!-- ==================== -->
+    <mappers>
+        <!-- 功能 -->
+        <mapper resource="com/company/project/demoweb/dao/popedomfunction/PopedomFunction.xml"/>
+        <mapper resource="com/company/project/demoweb/dao/popedomrole/PopedomRole.xml"/>
+    </mappers>
+</configuration>

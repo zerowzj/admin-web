@@ -1,6 +1,5 @@
 package com.company.project.demoweb.web.api.demo;
 
-import com.company.project.demoweb.support.api.BaseApi;
 import com.company.project.demoweb.support.action.ActionExecutor;
 import com.company.project.demoweb.support.annotation.Action;
 import org.springframework.stereotype.Controller;
@@ -15,7 +14,7 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping("/demo")
-public class DemoApi extends BaseApi {
+public class DemoApi {
 
     @Action("/say_hi")
     public Map<String, Object> say_hi(HttpServletRequest request, HttpServletResponse response) {

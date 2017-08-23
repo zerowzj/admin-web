@@ -11,9 +11,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
-/**
- * Created by wangzhj on 2017/8/10.
- */
 @Component
 public class Action_role_list extends BaseAction {
 
@@ -31,7 +28,6 @@ public class Action_role_list extends BaseAction {
         PageList<PopedomRoleEO> pageLt = roleService.getRolePageLt();
 
         Map<String, Object> data = Maps.newHashMap();
-
         data.put("", "");
         data.put("", "");
         return data;

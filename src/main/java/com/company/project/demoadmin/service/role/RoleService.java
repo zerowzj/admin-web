@@ -15,5 +15,5 @@ public interface RoleService {
      *
      * @return PageList<PopedomRoleEO>
      */
-    PageList<PopedomRoleEO> getRolePageLt();
+    PageList<PopedomRoleEO> getRolePageLt(String prName, int pageNo, int pageSize);
 }

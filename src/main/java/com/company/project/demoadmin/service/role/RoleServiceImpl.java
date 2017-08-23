@@ -7,13 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RoleServiceImpl implements RoleService{
+public class RoleServiceImpl implements RoleService {
 
     @Autowired
     private PopedomRoleDao popedomRoleDao;
 
     @Override
-    public PageList<PopedomRoleEO> getRolePageLt() {
-        return popedomRoleDao.getRolePageLt();
+    public PageList<PopedomRoleEO> getRolePageLt(String prName, int pageNo, int pageSize) {
+        return popedomRoleDao.getRolePageLt(prName, pageNo, pageSize);
     }
 }

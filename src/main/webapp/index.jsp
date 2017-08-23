@@ -1,4 +1,4 @@
-<%@ taglib prefix="ex" uri="/WEB-INF/tags.tld" %>
+<%@ taglib prefix="myTag" uri="/WEB-INF/tags.tld" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -35,14 +35,14 @@
         <div class="layui-side-scroll">
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
             <ul class="layui-nav layui-nav-tree" lay-filter="test">
-
                 <li class="layui-nav-item layui-nav-itemed">
                     <a href="javascript:;">权限管理</a>
                     <dl class="layui-nav-child">
                         <dd><a href="/role/list">角色列表</a></dd>
                     </dl>
                 </li>
-                <ex:menu/>
+
+                <myTag:menu/>
 
                 <li class="layui-nav-item layui-nav-itemed">
                     <a href="javascript:;">安全管理</a>
@@ -56,7 +56,9 @@
 
     <div class="layui-body">
         <!-- 内容主体区域 -->
-        <div style="padding: 15px;"><sitemesh:write property="body"/></div>
+        <div style="padding: 15px;">
+            <sitemesh:write property="body"/>
+        </div>
     </div>
 
     <div class="layui-footer">

@@ -10,6 +10,5 @@ import com.github.miemiedev.mybatis.paginator.domain.PageList;
  */
 public interface PopedomRoleDao extends BaseDao<PopedomRoleEO> {
 
-    PageList<PopedomRoleEO> getRolePageLt();
-
+    PageList<PopedomRoleEO> getRolePageLt(String prName, int pageNo, int pageSize);
 }

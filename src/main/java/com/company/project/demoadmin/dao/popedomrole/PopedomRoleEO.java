@@ -14,48 +14,23 @@ public class PopedomRoleEO extends BaseEO {
     /**
      * 角色编号
      */
-    private Long prId = null;
-
+    private Long prId;
     /**
      * 角色名称
      */
-    private String prName = null;
-
+    private String prName;
     /**
      * 角色状态
      */
-    private String prStatus = null;
-    /**
-     * 角色状态 - 启用
-     */
-    public static final String PR_STATUS_YES = "Y";
-    /**
-     * 角色状态 - 停用
-     */
-    public static final String PR_STATUS_NO = "N";
-
-    /**
-     * 角色类型
-     */
-    private String prType = null;
-    /**
-     * 角色类型 - 超级
-     */
-    public static final String PR_TYPE_SUPER = "S";
-    /**
-     * 角色类型 - 普通
-     */
-    public static final String PR_TYPE_NORMAL = "N";
-
+    private String prStatus;
     /**
      * 创建时间
      */
-    private Date prBeginTime = null;
-
+    private Date prBeginTime;
     /**
      * 角色描述
      */
-    private String prDesc = null;
+    private String prDesc;
 
     public Long getPrId() {
         return prId;
@@ -79,14 +54,6 @@ public class PopedomRoleEO extends BaseEO {
 
     public void setPrStatus(String prStatus) {
         this.prStatus = prStatus;
-    }
-
-    public String getPrType() {
-        return prType;
-    }
-
-    public void setPrType(String prType) {
-        this.prType = prType;
     }
 
     public String getPrDesc() {

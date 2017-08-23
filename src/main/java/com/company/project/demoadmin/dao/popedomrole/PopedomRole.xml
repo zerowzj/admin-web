@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.company.project.dao.popedomrole">
-    <resultMap id="popedomRoleEO" type="PopedomRoleEO">
+    <resultMap id="prEO" type="PopedomRoleEO">
         <result property="prId" column="PR_ID"/>
         <result property="prName" column="PR_NAME"/>
         <result property="prStatus" column="PR_STATUS"/>
@@ -18,5 +18,17 @@
         PR.PR_BEGIN_TIME,
         PR.PR_DESC
     </sql>
+
+    <select id="getRolePageLt" parameterType="java.util.Map" resultMap="prEO">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM POPEDOM_ROLE PR
+        <where>
+            <if test="prName != null">
+                PR.PR_NAME = #{prName}
+            </if>
+        </where>
+        ORDER BY PR.PR_ID DESC
+    </select>
 
 </mapper>

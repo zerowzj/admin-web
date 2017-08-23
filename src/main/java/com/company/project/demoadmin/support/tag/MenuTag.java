@@ -24,8 +24,8 @@ public class MenuTag extends BaseTag {
     static {
         try {
             ClasspathResourceLoader loader = new ClasspathResourceLoader("");
-            Configuration cfg = Configuration.defaultConfiguration();
-            GroupTemplate gt = new GroupTemplate(loader, cfg);
+            Configuration config = Configuration.defaultConfiguration();
+            GroupTemplate gt = new GroupTemplate(loader, config);
             template = gt.getTemplate(FILE_NAME);
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -33,10 +33,6 @@ public class MenuTag extends BaseTag {
     }
 
     @Override
-    public int doStartTag() throws JspException {
-        return SKIP_BODY;
-    }
-
     public int doEndTag() throws JspException {
         List<MenuEO> menuEOLt = Lists.newArrayList();
 

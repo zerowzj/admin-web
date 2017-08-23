@@ -12,7 +12,7 @@
 <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
     <legend>数据操作和左右列固定</legend>
 </fieldset>
-<table class="layui-table">
+<table class="layui-table" lay-data="{height:313, url:'/demo/table/user/'}">
     <thead>
     <tr>
         <th lay-data="{checkbox:true, fixed: true}"></th>
@@ -37,6 +37,10 @@
     <thead>
     </thead>
 </table>
-
+<script>
+    layui.use('table', function () {
+        var table = layui.table;
+    });
+</script>
 </body>
 </html>

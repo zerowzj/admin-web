@@ -7,9 +7,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
-/**
- * Created by wangzhj on 2017/8/10.
- */
 @Component
 public class Action_role_add extends BaseAction {
 

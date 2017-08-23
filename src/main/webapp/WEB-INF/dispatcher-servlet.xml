@@ -61,6 +61,6 @@
     <!-- =================== -->
     <!--         其他        -->
     <!-- =================== -->
-    <bean class="com.company.project.demoweb.support.SpringContext"/>
-    <bean class="com.company.project.demoweb.support.Uris"/>
+    <bean class="com.company.project.demoadmin.support.SpringContext"/>
+    <bean class="com.company.project.demoadmin.support.Uris"/>
 </beans>

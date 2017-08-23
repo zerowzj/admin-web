@@ -32,18 +32,6 @@ public class LoginSuccessHandler extends SavedRequestAwareAuthenticationSuccessH
         CustomUserDetails userDetails = (CustomUserDetails) token.getPrincipal();
 
         LOGGER.info("===>用户[{}]登录成功!", userDetails.getUsername());
-        List<MenuEO> menuEOLt = Lists.newArrayList();
-
-        MenuEO menuEO = new MenuEO();
-        menuEO.setPfName("权限管理");
-
-        menuEOLt.add(menuEO);
-
-        List<MenuEO> children = Lists.newArrayList();
-        MenuEO menuEO1 = new MenuEO();
-        menuEO1.setPfName("角色列表");
-        children.add(menuEO1);
-        request.getSession().setAttribute("menuEOLt", menuEOLt);
 
         //执行父逻辑
         super.onAuthenticationSuccess(request, response, authentication);

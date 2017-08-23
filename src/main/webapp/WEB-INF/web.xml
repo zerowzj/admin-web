@@ -18,7 +18,7 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
     <listener>
-        <listener-class>com.company.project.demoweb.support.listener.LoaderListener</listener-class>
+        <listener-class>com.company.project.demoadmin.support.listener.LoaderListener</listener-class>
     </listener>
     <!-- ==================== -->
     <!--       拦截器         -->

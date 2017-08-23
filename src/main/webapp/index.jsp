@@ -1,3 +1,4 @@
+<%@ taglib prefix="ex" uri="/WEB-INF/project.tld" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -32,24 +33,15 @@
     <div class="layui-side layui-bg-black">
         <div class="layui-side-scroll">
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-            {{for menuEOLt}}
-            < class="layui-nav layui-nav-tree" lay-filter="test">
-            <li class="layui-nav-item layui-nav-itemed">
-                <a class="" href="javascript:;">{{:pfName}}</a>
-                <%--{{for :children}}--%>
-                <%--<dl class="layui-nav-child">--%>
-                    <%--<dd><a href="javascript:;">角色列表</a></dd>--%>
-                    <%--<dd><a href="javascript:;">列表三</a></dd>--%>
-                <%--</dl>--%>
-                <%--{{/for}}--%>
-            </li>
-            {{/for}}
-            <li class="layui-nav-item layui-nav-itemed">
-                <a href="javascript:;">安全管理</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="javascript:;">修改密码</a></dd>
-                </dl>
-            </li>
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <ex:menu />
+
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a href="javascript:;">安全管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">修改密码</a></dd>
+                    </dl>
+                </li>
             </ul>
         </div>
     </div>
@@ -65,8 +57,6 @@
     </div>
 </div>
 <script type="text/javascript" src="/static/layui/layui.js"></script>
-<script type="text/javascript" src="/static/jsrender/jsrender.min.js"></script>
-<script type="text/javascript" src="/static/jsviews/jsviews.min.js"></script>
 <script>
     //JavaScript代码区域
     layui.use('element', function () {

@@ -5,9 +5,8 @@
     <!--        别名           -->
     <!-- ==================== -->
     <typeAliases>
-        <!-- 功能 -->
-        <typeAlias type="com.company.project.demoweb.dao.popedomfunction.PopedomFunctionEO" alias="PopedomFunctionEO"/>
-        <typeAlias type="com.company.project.demoweb.dao.popedomrole.PopedomRoleEO" alias="PopedomRoleEO"/>
+        <typeAlias type="com.company.project.demoadmin.dao.popedomfunction.PopedomFunctionEO" alias="PopedomFunctionEO"/>
+        <typeAlias type="com.company.project.demoadmin.dao.popedomrole.PopedomRoleEO" alias="PopedomRoleEO"/>
     </typeAliases>
     <!-- ==================== -->
     <!--        插件           -->
@@ -21,8 +20,7 @@
     <!--        映射           -->
     <!-- ==================== -->
     <mappers>
-        <!-- 功能 -->
-        <mapper resource="com/company/project/demoweb/dao/popedomfunction/PopedomFunction.xml"/>
-        <mapper resource="com/company/project/demoweb/dao/popedomrole/PopedomRole.xml"/>
+        <mapper resource="com/company/project/demoadmin/dao/popedomfunction/PopedomFunction.xml"/>
+        <mapper resource="com/company/project/demoadmin/dao/popedomrole/PopedomRole.xml"/>
     </mappers>
 </configuration>

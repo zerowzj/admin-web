@@ -2,17 +2,35 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
-		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd"
->
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 
-    <!--<context:component-scan base-package="com.company.project">-->
-    <!--</context:component-scan>-->
+    <context:component-scan base-package="com.company.project">
+    </context:component-scan>
 
-
-    <dubbo:application name="demo-api"/>
+    <!-- ====================================== -->
+    <!--              加载Properties            -->
+    <!-- ====================================== -->
+    <context:property-placeholder location="classpath*:*.properties" ignore-unresolvable="true"/>
+    <!-- ====================================== -->
+    <!--                  数据访问              -->
+    <!-- ====================================== -->
+    <!-- DataSource -->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="username" value="${ds.druid.username}"/>
+        <property name="password" value="${ds.druid.password}"/>
+        <property name="url" value="${ds.druid.url}"/>
+    </bean>
+    <!-- SessionFactory -->
+    <bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:mybatis-cfg.xml"/>
+    </bean>
 
     <!--<dubbo:registry protocol="dubbo" address="zookeeper://${server.zk.url}" file="${server.dubbo.registry.file}"/>-->
 

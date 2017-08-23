@@ -3,10 +3,10 @@
     <!-- ==================== -->
     <!--        装饰          -->
     <!-- ==================== -->
-    <mapping path="/demo/to_add" decorator="/index.jsp"/>
+    <mapping path="/role/**" decorator="/index.jsp"/>
 
     <!-- ==================== -->
     <!--        排除          -->
     <!-- ==================== -->
-    <!--<mapping path="/role/toConf*" exclue="true"/>-->
+    <mapping path="/api/**" exclue="true"/>
 </sitemesh>

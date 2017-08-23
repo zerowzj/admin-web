@@ -28,7 +28,7 @@ public abstract class BaseAction implements Action {
         try {
             //参数
             Map<String, Object> param = request.getParameterMap();
-            LOGGER.info("===> i: {}", JsonUtil.toJson(param));
+            LOGGER.info("i: {}", JsonUtil.toJson(param));
             //包装
             SessionUserInfo userInfo = null;
             RequestContext cxt = new RequestContext(request, response, userInfo);
@@ -38,7 +38,7 @@ public abstract class BaseAction implements Action {
             Map<String, Object> data = execute(cxt, param);
             //结果
             result = Results.ok(data);
-            LOGGER.info("<=== o: {}", JsonUtil.toJson(result));
+            LOGGER.info("o: {}", JsonUtil.toJson(result));
         } catch (Exception ex) {
             throw ex;
         }

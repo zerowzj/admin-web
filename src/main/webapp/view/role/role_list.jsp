@@ -12,29 +12,15 @@
 <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
     <legend>数据操作和左右列固定</legend>
 </fieldset>
-<table class="layui-table" lay-data="{height:313, url:'/demo/table/user/'}">
+<table class="layui-table" lay-data="{height:315, url:'/api/role/list', page:true}" lay-filter="test">
     <thead>
     <tr>
-        <th lay-data="{checkbox:true, fixed: true}"></th>
-        <th lay-data="{field:'id', width:80, sort: true, fixed: true}">角色编号</th>
+        <th lay-data="{field:'id', width:100, fixed: true}">角色编号</th>
         <th lay-data="{field:'username', width:80}">角色名</th>
         <th lay-data="{field:'sex', width:80, sort: true}">状态</th>
         <th lay-data="{field:'city', width:80}">创建时间</th>
-        <th lay-data="{field:'city', width:80}">创建时间</th>
         <th lay-data="{fixed: 'right', width:160, align:'center', toolbar: '#barDemo'}"></th>
     </tr>
-    </thead>
-    <tr>
-        <th></th>
-        <th>12321</th>
-        <th>职业</th>
-        <th>财富</th>
-        <th>评分</th>
-        <th>评分</th>
-        <th>
-        </th>
-    </tr>
-    <thead>
     </thead>
 </table>
 <script>

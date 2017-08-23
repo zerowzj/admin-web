@@ -13,7 +13,7 @@ import java.util.Map;
  * Created by wangzhj on 2017/8/10.
  */
 @Controller
-@RequestMapping("/role")
+@RequestMapping("/api/role")
 public class RoleApi {
 
     @Action("/add")

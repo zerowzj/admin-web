@@ -10,5 +10,10 @@ import com.github.miemiedev.mybatis.paginator.domain.PageList;
  */
 public interface RoleService {
 
+    /**
+     * 获取角色列表
+     *
+     * @return PageList<PopedomRoleEO>
+     */
     PageList<PopedomRoleEO> getRolePageLt();
 }

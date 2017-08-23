@@ -1,9 +1,9 @@
 package com.company.project.demoadmin.support.action;
 
-import com.company.project.demoadmin.common.JsonUtil;
+import com.company.project.demoadmin.common.util.JsonUtil;
 import com.company.project.demoadmin.support.Results;
-import com.company.project.demoadmin.support.context.SessionUserInfo;
 import com.company.project.demoadmin.support.context.RequestContext;
+import com.company.project.demoadmin.support.context.SessionUserInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,7 +24,6 @@ public abstract class BaseAction implements Action {
     @Override
     public final Map<String, Object> doExecute(HttpServletRequest request, HttpServletResponse response) {
 
-        LOGGER.info("ParameterMap===>" + request.getParameterMap());
         Map<String, Object> result;
         try {
             //参数

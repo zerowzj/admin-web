@@ -1,6 +1,6 @@
 package com.company.project.demoadmin.support.context;
 
-import com.company.project.demoadmin.common.JsonUtil;
+import com.company.project.demoadmin.common.util.JsonUtil;
 import com.google.common.base.Charsets;
 import com.google.common.base.Strings;
 import com.google.common.io.CharStreams;

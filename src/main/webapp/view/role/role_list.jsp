@@ -10,22 +10,37 @@
 </head>
 <body>
 <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
-    <legend>数据操作和左右列固定</legend>
+    <legend>基本表格</legend>
 </fieldset>
-<table class="layui-table" lay-data="{height:315, url:'/api/role/list', page:true}" lay-filter="test">
+
+<table class="layui-table" lay-data="{height:313, url:'/api/role/list'}">
     <thead>
     <tr>
-        <th lay-data="{field:'id', width:100, fixed: true}">角色编号</th>
-        <th lay-data="{field:'username', width:80}">角色名</th>
-        <th lay-data="{field:'sex', width:80, sort: true}">状态</th>
-        <th lay-data="{field:'city', width:80}">创建时间</th>
-        <th lay-data="{fixed: 'right', width:160, align:'center', toolbar: '#barDemo'}"></th>
+        <th lay-data="{field:'id', width:80, sort: true}">ID</th>
+        <th lay-data="{field:'username', width:80}">用户名</th>
+        <th lay-data="{field:'sex', width:80, sort: true}">性别</th>
+        <th lay-data="{field:'city', width:80}">城市</th>
+        <th lay-data="{field:'sign', width:177}">签名</th>
+        <th lay-data="{field:'experience', width:80, sort: true}">积分</th>
+        <th lay-data="{field:'score', width:80, sort: true}">评分</th>
+        <th lay-data="{field:'classify', width:80}">职业</th>
+        <th lay-data="{field:'wealth', width:135, sort: true}">财富</th>
     </tr>
     </thead>
 </table>
+<div id="demo7"></div>
 <script>
-    layui.use('table', function () {
+    layui.use(['table', 'laypage'], function () {
         var table = layui.table;
+        var laypage = layui.laypage;
+        laypage.render({
+            elem: 'demo7'
+            , count: 100
+            , layout: ['count', 'prev', 'page', 'next', 'limit', 'skip']
+            , jump: function (obj) {
+                console.log(obj)
+            }
+        });
     });
 </script>
 </body>

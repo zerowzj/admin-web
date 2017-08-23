@@ -12,26 +12,46 @@
     <context:component-scan base-package="com.company.project">
     </context:component-scan>
 
-    <!-- ====================================== -->
-    <!--              加载Properties            -->
-    <!-- ====================================== -->
+    <!-- ==================== -->
+    <!--    加载Properties    -->
+    <!-- ==================== -->
     <context:property-placeholder location="classpath*:*.properties" ignore-unresolvable="true"/>
-    <!-- ====================================== -->
-    <!--                  数据访问              -->
-    <!-- ====================================== -->
-    <!-- DataSource -->
+    <!-- ==================== -->
+    <!--      数据访问         -->
+    <!-- ==================== -->
+    <!-- 数据源 -->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
         <property name="username" value="${ds.druid.username}"/>
         <property name="password" value="${ds.druid.password}"/>
         <property name="url" value="${ds.druid.url}"/>
     </bean>
-    <!-- SessionFactory -->
+    <!-- 回话工厂 -->
     <bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="configLocation" value="classpath:mybatis-cfg.xml"/>
     </bean>
-
-    <!--<dubbo:registry protocol="dubbo" address="zookeeper://${server.zk.url}" file="${server.dubbo.registry.file}"/>-->
-
+    <!-- 事务管理器 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!-- 事务通知 -->
+    <tx:advice id="transactionAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="find*" propagation="SUPPORTS" read-only="true"/>
+            <tx:method name="get*" propagation="SUPPORTS" read-only="true"/>
+            <tx:method name="add*" propagation="REQUIRED"/>
+            <tx:method name="modify*" propagation="REQUIRED"/>
+            <tx:method name="delete*" propagation="SUPPORTS"/>
+            <tx:method name="*" read-only="true"/>
+        </tx:attributes>
+    </tx:advice>
+    <!-- ==================== -->
+    <!--          AOP         -->
+    <!-- ==================== -->
+    <aop:config>
+        <aop:pointcut id="transactionPointcut"
+                      expression="execution(public * com.company.project.demoadmin.service.*.*(..))"/>
+        <aop:advisor advice-ref="transactionAdvice" pointcut-ref="transactionPointcut"/>
+    </aop:config>
 </beans>

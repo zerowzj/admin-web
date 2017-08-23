@@ -3,6 +3,7 @@ package com.company.project.demoadmin.dao.popedomrole;
 import com.company.project.demoadmin.common.db.BaseDaoImpl;
 import com.github.miemiedev.mybatis.paginator.domain.PageBounds;
 import com.github.miemiedev.mybatis.paginator.domain.PageList;
+import com.google.common.collect.Maps;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
@@ -13,7 +14,7 @@ public class PopedomRoleDaoImpl extends BaseDaoImpl<PopedomRoleEO> implements Po
 
     @Override
     public PageList<PopedomRoleEO> getRolePageLt(String prName, int pageNo, int pageSize) {
-        Map<String, Object> params = new HashMap<>();
+        Map<String, Object> params = Maps.newHashMap();
         params.put("prName", prName);
         PageBounds pageBounds = new PageBounds(pageNo, pageSize);
         return (PageList) getSqlSession().selectList(getSqlId("getRolePageLt"), params, pageBounds);

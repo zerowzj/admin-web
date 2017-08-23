@@ -1,5 +1,6 @@
 package com.company.project.demoadmin.auth.filter;
 
+import com.company.project.demoadmin.support.context.TrackKey;
 import com.google.common.base.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,13 +36,14 @@ public class WatchDogFilter extends OncePerRequestFilter {
             if (Strings.isNullOrEmpty(requestId)) {
                 requestId = String.valueOf(UUID.randomUUID().hashCode() & 0x7fffffff);
             }
+            TrackKey.set(requestId);
             //
             MDC.put(REQUEST_ID_, requestId);
-            LOGGER.info("SSSSSSSSSSS");
             //
             filterChain.doFilter(request, response);
         } finally {
             MDC.clear();
+            TrackKey.remove();
         }
     }
 }

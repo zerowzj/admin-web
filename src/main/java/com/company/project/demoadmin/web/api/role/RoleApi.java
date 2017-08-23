@@ -20,4 +20,9 @@ public class RoleApi {
     public Map<String, Object> add(HttpServletRequest request, HttpServletResponse response) {
         return ActionExecutor.execute(request, response, Action_role_add.class);
     }
+
+    @Action("/list")
+    public Map<String, Object> list(HttpServletRequest request, HttpServletResponse response) {
+        return ActionExecutor.execute(request, response, Action_role_list.class);
+    }
 }

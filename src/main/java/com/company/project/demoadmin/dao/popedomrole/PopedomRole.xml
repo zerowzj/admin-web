@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.dao.popedomrole">
+    <resultMap id="popedomRoleEO" type="PopedomRoleEO">
+        <result property="prId" column="PR_ID"/>
+        <result property="prName" column="PR_NAME"/>
+        <result property="prStatus" column="PR_STATUS"/>
+        <result property="prType" column="PR_TYPE"/>
+        <result property="prBeginTime" column="PR_BEGIN_TIME"/>
+        <result property="prDesc" column="PR_DESC"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        PR.PR_ID,
+        PR.PR_NAME,
+        PR.PR_STATUS,
+        PR.PR_TYPE,
+        PR.PR_BEGIN_TIME,
+        PR.PR_DESC
+    </sql>
+
+</mapper>

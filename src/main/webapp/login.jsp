@@ -16,6 +16,11 @@
         <form action="/login.html" class="layui-form" method="post">
             <div class="layui-form-item">
                 <label class="beg-login-icon">
+                    <i class="layui-icon">&#xe612;胜多负少</i>
+                </label>
+            </div>
+            <div class="layui-form-item">
+                <label class="beg-login-icon">
                     <i class="layui-icon">&#xe612;</i>
                 </label>
                 <input type="text" name="loginName" lay-verify="loginName" autocomplete="off" placeholder="登录名"

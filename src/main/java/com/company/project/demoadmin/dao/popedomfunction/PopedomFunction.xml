@@ -20,7 +20,7 @@
         PF.PF_IS_MENU
     </sql>
 
-    <select id="getMenuLt" parameterType="java.util.Map" resultMap="pfEO">
+    <select id="getRoleFunctionLt" parameterType="java.util.Map" resultMap="pfEO">
         SELECT
         <include refid="Base_Column_List"/>
         FROM POPEDOM_FUNCTION PF

@@ -1,5 +1,7 @@
 package com.company.project.demoadmin.service.function;
 
+import com.company.project.demoadmin.dao.popedomfunction.PopedomFunctionEO;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -10,5 +12,19 @@ import java.util.List;
  */
 public interface FunctionService {
 
-    Collection<MenuVO> getMenuLt(Long prId);
+    /**
+     * 获取角色菜单列表
+     *
+     * @param prId
+     * @return Collection<MenuVO>
+     */
+    Collection<MenuVO> getRoleMenuLt(Long prId);
+
+    /**
+     * 获取角色授权列表
+     *
+     * @param prId
+     * @return List<PopedomFunctionEO>
+     */
+    List<PopedomFunctionEO> getRolePermissionLt(Long prId);
 }

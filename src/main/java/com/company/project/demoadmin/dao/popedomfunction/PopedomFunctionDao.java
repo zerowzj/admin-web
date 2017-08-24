@@ -12,5 +12,12 @@ import java.util.List;
  */
 public interface PopedomFunctionDao extends BaseDao<PopedomFunctionEO> {
 
-    List<PopedomFunctionEO> getMenuLt(Long prId);
+    /**
+     * 获取角色功能列表
+     *
+     * @param prId
+     * @param pfIsMenu
+     * @return List<PopedomFunctionEO>
+     */
+    List<PopedomFunctionEO> getRoleFunctionLt(Long prId, String pfIsMenu);
 }

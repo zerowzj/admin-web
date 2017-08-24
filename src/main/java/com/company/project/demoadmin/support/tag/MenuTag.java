@@ -11,7 +11,6 @@ import org.beetl.core.resource.ClasspathResourceLoader;
 
 import javax.servlet.jsp.JspException;
 import java.util.Collection;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -39,7 +38,7 @@ public class MenuTag extends BaseTag {
     @Override
     public int doEndTag() throws JspException {
         FunctionService functionService = SpringContext.getBean(FunctionService.class);
-        Collection<MenuVO> menuVOLt = functionService.getMenuLt(1L);
+        Collection<MenuVO> menuVOLt = functionService.getRoleMenuLt(1L);
 
         Map data = Maps.newHashMap();
         data.put("menuVOLt", menuVOLt);

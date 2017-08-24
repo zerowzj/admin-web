@@ -11,9 +11,10 @@ import java.util.Map;
 public class PopedomFunctionDaoImpl extends BaseDaoImpl<PopedomFunctionEO> implements PopedomFunctionDao {
 
     @Override
-    public List<PopedomFunctionEO> getMenuLt(Long prId) {
+    public List<PopedomFunctionEO> getRoleFunctionLt(Long prId, String pfIsMenu) {
         Map<String, Object> param = Maps.newHashMap();
         param.put("prId", prId);
-        return getSqlSession().selectList(getSqlId("getMenuLt"), param);
+        param.put("pfIsMenu", pfIsMenu);
+        return getSqlSession().selectList(getSqlId("getRoleFunctionLt"), param);
     }
 }

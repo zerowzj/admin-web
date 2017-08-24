@@ -24,7 +24,7 @@
         SELECT
         <include refid="Base_Column_List"/>
         FROM POPEDOM_FUNCTION PF
-        INNER JOIN POPEDOM_ROLE_FUNCTION PRF ON PF.PF_ID = PRF.PRF_PF_ID
+        JOIN POPEDOM_ROLE_FUNCTION PRF ON PF.PF_ID = PRF.PRF_PF_ID
         WHERE PRF.PRF_PR_ID = #{prId}
     </select>
 

@@ -15,7 +15,7 @@ public interface FunctionService {
     /**
      * 获取功能列表
      *
-     * @return List<MenuVO>
+     * @return List<PopedomFunctionEO>
      */
     List<PopedomFunctionEO> getFunctionLt();
 

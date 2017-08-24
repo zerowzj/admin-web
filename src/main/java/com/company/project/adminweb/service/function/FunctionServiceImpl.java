@@ -18,7 +18,7 @@ public class FunctionServiceImpl implements FunctionService {
 
     @Override
     public List<PopedomFunctionEO> getFunctionLt() {
-        return popedomFunctionDao.getFunctionLt();
+        return popedomFunctionDao.getFunctionLt(null, null);
     }
 
     @Override

@@ -23,17 +23,22 @@ public class PopedomFunctionEO extends BaseEO {
      */
     private String pfName;
     /**
-     * 功能状态
+     * 功能路径
      */
-    private String pfStatus;
+    private String pfPath;
     /**
      * 功能级别
      */
     private Integer pfLevel;
     /**
-     * 功能路径
+     * 功能状态
      */
-    private String pfPath;
+    private String pfStatus;
+    /**
+     * 是否是菜单
+     */
+    private String pfIsMenu;
+
 
     public Long getPfId() {
         return pfId;
@@ -81,5 +86,13 @@ public class PopedomFunctionEO extends BaseEO {
 
     public void setPfPath(String pfPath) {
         this.pfPath = pfPath;
+    }
+
+    public String getPfIsMenu() {
+        return pfIsMenu;
+    }
+
+    public void setPfIsMenu(String pfIsMenu) {
+        this.pfIsMenu = pfIsMenu;
     }
 }

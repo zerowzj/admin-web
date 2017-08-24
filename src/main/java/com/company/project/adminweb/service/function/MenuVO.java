@@ -11,10 +11,17 @@ import java.util.List;
  */
 public class MenuVO {
 
+    /**
+     *
+     */
     private String pfName;
-
+    /**
+     *
+     */
     private String pfPath;
-
+    /**
+     *
+     */
     private List<MenuVO> children = Lists.newArrayList();
 
     public String getPfName() {

@@ -60,7 +60,7 @@
     <!-- ==================== -->
     <aop:config>
         <aop:pointcut id="transactionPointcut"
-                      expression="execution(public * com.company.project.demoadmin.service.*.*(..))"/>
+                      expression="execution(public * com.company.project.adminweb.service.*.*(..))"/>
         <aop:advisor advice-ref="transactionAdvice" pointcut-ref="transactionPointcut"/>
     </aop:config>
 </beans>

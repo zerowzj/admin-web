@@ -10,7 +10,7 @@
     <uri>http://www.company.com/tag</uri>
     <tag>
         <name>menu</name>
-        <tag-class>com.company.project.demoadmin.support.tag.MenuTag</tag-class>
+        <tag-class>com.company.project.adminweb.support.tag.MenuTag</tag-class>
         <body-content>JSP</body-content>
     </tag>
 </taglib>

@@ -5,8 +5,8 @@
     <!--        别名           -->
     <!-- ==================== -->
     <typeAliases>
-        <typeAlias type="com.company.project.demoadmin.dao.popedomfunction.PopedomFunctionEO" alias="PopedomFunctionEO"/>
-        <typeAlias type="com.company.project.demoadmin.dao.popedomrole.PopedomRoleEO" alias="PopedomRoleEO"/>
+        <typeAlias type="com.company.project.adminweb.dao.popedomfunction.PopedomFunctionEO" alias="PopedomFunctionEO"/>
+        <typeAlias type="com.company.project.adminweb.dao.popedomrole.PopedomRoleEO" alias="PopedomRoleEO"/>
     </typeAliases>
     <!-- ==================== -->
     <!--        插件           -->

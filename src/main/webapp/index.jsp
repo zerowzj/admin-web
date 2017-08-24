@@ -13,7 +13,9 @@
 <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
         <div class="layui-logo">管理平台</div>
+        <!-- ================================= -->
         <!-- 头部区域（可配合layui已有的水平导航） -->
+        <!-- ================================= -->
         <ul class="layui-nav layui-layout-left">
         </ul>
         <ul class="layui-nav layui-layout-right">
@@ -33,14 +35,10 @@
 
     <div class="layui-side layui-bg-black">
         <div class="layui-side-scroll">
+            <!-- ===================================== -->
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <!-- ===================================== -->
             <ul class="layui-nav layui-nav-tree" lay-filter="test">
-                <li class="layui-nav-item layui-nav-itemed">
-                    <a href="javascript:;">权限管理</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="/role/list">角色列表</a></dd>
-                    </dl>
-                </li>
 
                 <myTag:menu/>
 
@@ -55,14 +53,18 @@
     </div>
 
     <div class="layui-body">
+        <!-- =========== -->
         <!-- 内容主体区域 -->
+        <!-- =========== -->
         <div style="padding: 15px;">
             <sitemesh:write property="body"/>
         </div>
     </div>
 
     <div class="layui-footer">
+        <!-- =========== -->
         <!-- 底部固定区域 -->
+        <!-- =========== -->
         © layui.com - 底部固定区域
     </div>
 </div>

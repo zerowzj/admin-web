@@ -17,9 +17,14 @@ public class FunctionServiceImpl implements FunctionService {
     private PopedomFunctionDao popedomFunctionDao;
 
     @Override
+    public List<PopedomFunctionEO> getFunctionLt() {
+        return popedomFunctionDao.getFunctionLt();
+    }
+
+    @Override
     public Collection<MenuVO> getRoleMenuLt(Long prId) {
         List<PopedomFunctionEO> pfEOLt = popedomFunctionDao.getRoleFunctionLt(prId, "Y");
-        Map<Long, MenuVO> M = Maps.newHashMap();
+        Map<Long, MenuVO> data = Maps.newHashMap();
         for (PopedomFunctionEO pfEO : pfEOLt) {
             MenuVO menuVO = new MenuVO();
             menuVO.setPfName(pfEO.getPfName());
@@ -28,13 +33,12 @@ public class FunctionServiceImpl implements FunctionService {
             Long pfId = pfEO.getPfId();
             Long pfParentId = pfEO.getPfParentId();
             if (pfParentId == null) {
-                M.put(pfId, menuVO);
+                data.put(pfId, menuVO);
             } else {
-                M.get(pfParentId).getChildren().add(menuVO);
+                data.get(pfParentId).getChildren().add(menuVO);
             }
         }
-
-        return M.values();
+        return data.values();
     }
 
     @Override

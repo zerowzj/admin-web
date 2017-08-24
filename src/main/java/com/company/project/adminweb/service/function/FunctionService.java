@@ -13,6 +13,13 @@ import java.util.List;
 public interface FunctionService {
 
     /**
+     * 获取功能列表
+     *
+     * @return List<MenuVO>
+     */
+    List<PopedomFunctionEO> getFunctionLt();
+
+    /**
      * 获取角色菜单列表
      *
      * @param prId

@@ -1,6 +1,5 @@
 <%@ taglib prefix="myTag" uri="/WEB-INF/tags.tld" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,7 +8,7 @@
     <title><sitemesh:write property="title"/></title>
     <link rel="stylesheet" href="/static/layui/css/layui.css">
     <script src="/static/layui/layui.js"></script>
-    <script>
+    <script type="javascript">
         //JavaScript代码区域
         layui.use('element', function () {
             var element = layui.element;

@@ -8,7 +8,7 @@
     <title><sitemesh:write property="title"/></title>
     <link rel="stylesheet" href="/static/layui/css/layui.css">
     <script src="/static/layui/layui.js"></script>
-    <script type="javascript">
+    <script>
         //JavaScript代码区域
         layui.use('element', function () {
             var element = layui.element;

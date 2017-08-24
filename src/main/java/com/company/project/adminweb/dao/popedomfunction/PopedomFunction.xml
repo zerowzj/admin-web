@@ -30,7 +30,7 @@
                 PRF.PRF_PR_ID = #{prId}
             </if>
             <if test="pfIsMenu != null">
-                PF.PF_IS_MENU = #{pfIsMenu}
+                AND PF.PF_IS_MENU = #{pfIsMenu}
             </if>
         </trim>
     </select>

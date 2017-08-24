@@ -13,6 +13,13 @@ import java.util.List;
 public interface PopedomFunctionDao extends BaseDao<PopedomFunctionEO> {
 
     /**
+     * 获取功能列表
+     *
+     * @return List<PopedomFunctionEO>
+     */
+    List<PopedomFunctionEO> getFunctionLt();
+
+    /**
      * 获取角色功能列表
      *
      * @param prId

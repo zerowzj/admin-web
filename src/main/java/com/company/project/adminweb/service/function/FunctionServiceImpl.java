@@ -39,9 +39,14 @@ public class FunctionServiceImpl implements FunctionService {
 
     @Override
     public List<PermissionVO> getRolePermissionLt(Long prId) {
-        List<PopedomFunctionEO> pfEOLt = popedomFunctionDao.getFunctionLt(null, null);
-        List<PopedomFunctionEO> rolePfEOLt = popedomFunctionDao.getRoleFunctionLt(prId, null);
 
+        List<PopedomFunctionEO> rolePfEOLt = popedomFunctionDao.getRoleFunctionLt(prId, null);
+        List<Long> rolePfIdLt = Lists.newArrayList();
+        for(PopedomFunctionEO pfEO : rolePfEOLt){
+            rolePfIdLt.add(pfEO.getPfId());
+        }
+
+        List<PopedomFunctionEO> pfEOLt = popedomFunctionDao.getFunctionLt(null, null);
         List<PermissionVO> permissionVOLt = Lists.newArrayList();
         PermissionVO permissionVO;
         for (PopedomFunctionEO pfEO : pfEOLt) {
@@ -49,7 +54,7 @@ public class FunctionServiceImpl implements FunctionService {
 
 
             Long pfId = pfEO.getPfId();
-            Long pfParentId = pfEO.getPfParentId();
+
 
             permissionVOLt.add(permissionVO);
         }

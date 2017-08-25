@@ -2,6 +2,7 @@ package com.company.project.adminweb.service.function;
 
 import com.company.project.adminweb.dao.popedomfunction.PopedomFunctionDao;
 import com.company.project.adminweb.dao.popedomfunction.PopedomFunctionEO;
+import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -42,7 +43,21 @@ public class FunctionServiceImpl implements FunctionService {
     }
 
     @Override
-    public List<PopedomFunctionEO> getRolePermissionLt(Long prId) {
-        return popedomFunctionDao.getRoleFunctionLt(prId, null);
+    public List<PermissionVO> getRolePermissionLt(Long prId) {
+        List<PopedomFunctionEO> pfEOLt = popedomFunctionDao.getFunctionLt(null, null);
+        List<PopedomFunctionEO> rolePfEOLt = popedomFunctionDao.getRoleFunctionLt(prId, null);
+
+        List<PermissionVO> permissionVOLt = Lists.newArrayList();
+        PermissionVO permissionVO;
+        for(PopedomFunctionEO pfEO : pfEOLt){
+            permissionVO = new PermissionVO();
+
+
+            Long pfId = pfEO.getPfId();
+            Long pfParentId = pfEO.getPfParentId();
+
+            permissionVOLt.add(permissionVO);
+        }
+        return permissionVOLt;
     }
 }

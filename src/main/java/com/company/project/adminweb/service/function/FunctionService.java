@@ -31,7 +31,7 @@ public interface FunctionService {
      * 获取角色授权列表
      *
      * @param prId
-     * @return List<PopedomFunctionEO>
+     * @return List<PermissionVO>
      */
-    List<PopedomFunctionEO> getRolePermissionLt(Long prId);
+    List<PermissionVO> getRolePermissionLt(Long prId);
 }

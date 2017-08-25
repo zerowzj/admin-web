@@ -19,4 +19,40 @@ public class PermissionVO {
      * 功能名称
      */
     private String pfName;
+    /**
+     * 是否授权
+     */
+    private String isPermit;
+
+    public Long getPfId() {
+        return pfId;
+    }
+
+    public void setPfId(Long pfId) {
+        this.pfId = pfId;
+    }
+
+    public Long getPfParentId() {
+        return pfParentId;
+    }
+
+    public void setPfParentId(Long pfParentId) {
+        this.pfParentId = pfParentId;
+    }
+
+    public String getPfName() {
+        return pfName;
+    }
+
+    public void setPfName(String pfName) {
+        this.pfName = pfName;
+    }
+
+    public String getIsPermit() {
+        return isPermit;
+    }
+
+    public void setIsPermit(String isPermit) {
+        this.isPermit = isPermit;
+    }
 }

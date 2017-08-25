@@ -50,11 +50,18 @@ public class FunctionServiceImpl implements FunctionService {
         List<PermissionVO> permissionVOLt = Lists.newArrayList();
         PermissionVO permissionVO;
         for (PopedomFunctionEO pfEO : pfEOLt) {
-            permissionVO = new PermissionVO();
-
-
             Long pfId = pfEO.getPfId();
 
+            permissionVO = new PermissionVO();
+            permissionVO.setPfId(pfId);
+            permissionVO.setPfParentId(pfEO.getPfParentId());
+            permissionVO.setPfName(pfEO.getPfName());
+
+            if(rolePfIdLt.contains(pfId)){
+                permissionVO.setIsPermit("Y");
+            } else {
+                permissionVO.setIsPermit("N");
+            }
 
             permissionVOLt.add(permissionVO);
         }

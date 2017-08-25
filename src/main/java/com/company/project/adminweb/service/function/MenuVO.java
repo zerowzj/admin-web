@@ -12,15 +12,15 @@ import java.util.List;
 public class MenuVO {
 
     /**
-     *
+     * 功能名称
      */
     private String pfName;
     /**
-     *
+     * 功能路径
      */
     private String pfPath;
     /**
-     *
+     * 子功能
      */
     private List<MenuVO> children = Lists.newArrayList();
 

@@ -1,5 +1,7 @@
 package com.company.project.adminweb.service.function;
 
+import com.company.project.adminweb.dao.popedomfunction.PopedomFunctionEO;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -9,6 +11,15 @@ import java.util.List;
  * @author wangzhj
  */
 public interface FunctionService {
+
+    /**
+     * 获取功能列表
+     *
+     * @param pfStatus
+     * @param pfLevelLt
+     * @return List<PopedomFunctionEO>
+     */
+    List<PopedomFunctionEO> getFunctionLt(String pfStatus, List<Integer> pfLevelLt);
 
     /**
      * 获取角色菜单列表

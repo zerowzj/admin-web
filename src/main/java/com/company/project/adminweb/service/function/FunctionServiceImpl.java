@@ -18,6 +18,11 @@ public class FunctionServiceImpl implements FunctionService {
     private PopedomFunctionDao popedomFunctionDao;
 
     @Override
+    public List<PopedomFunctionEO> getFunctionLt(String pfStatus, List<Integer> pfLevelLt) {
+        return null;
+    }
+
+    @Override
     public Collection<MenuVO> getRoleMenuLt(Long prId) {
         List<PopedomFunctionEO> pfEOLt = popedomFunctionDao.getRoleFunctionLt(prId, "Y");
         Map<Long, MenuVO> menuVOMap = Maps.newHashMap();

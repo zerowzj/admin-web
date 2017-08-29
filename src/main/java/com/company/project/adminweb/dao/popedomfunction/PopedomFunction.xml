@@ -20,6 +20,23 @@
         PF.PF_IS_MENU
     </sql>
 
+    <select id="getFunctionLt" parameterType="java.util.Map" resultMap="pfEO">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM POPEDOM_FUNCTION PF
+        <trim prefix="WHERE" prefixOverrides="AND|OR ">
+            <if test="pfStatus != null">
+                PF.PF_STATUS = #{pfStatus}
+            </if>
+            <if test="pfLevelLt != null and !pfLevelLt.isEmpty()">
+                AND PF.PF_LEVEL IN
+                <foreach collection="pfLevelLt" item="pfLevel" open="(" close=")" separator=",">
+                    #{pfLevel}
+                </foreach>
+            </if>
+        </trim>
+    </select>
+
     <select id="getRoleFunctionLt" parameterType="java.util.Map" resultMap="pfEO">
         SELECT
         <include refid="Base_Column_List"/>

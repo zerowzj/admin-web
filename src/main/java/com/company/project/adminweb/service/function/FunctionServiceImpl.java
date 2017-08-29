@@ -19,7 +19,7 @@ public class FunctionServiceImpl implements FunctionService {
 
     @Override
     public List<PopedomFunctionEO> getFunctionLt(String pfStatus, List<Integer> pfLevelLt) {
-        return null;
+        return popedomFunctionDao.getFunctionLt(pfStatus, pfLevelLt);
     }
 
     @Override

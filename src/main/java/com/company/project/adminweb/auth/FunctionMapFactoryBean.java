@@ -43,7 +43,7 @@ public class FunctionMapFactoryBean implements FactoryBean<LinkedHashMap<Request
             Long pfId = pfEO.getPfId();
             String pfPath = pfEO.getPfPath();
             if (Strings.isNullOrEmpty(pfPath)) {
-                LOGGER.warn("功能[{}]Path为空", pfId);
+                LOGGER.warn("功能[{}]path为空", pfId);
                 continue;
             }
             //匹配器

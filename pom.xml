@@ -6,7 +6,7 @@
     <!-- ==================== -->
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.company.project.demoadmin</groupId>
-    <artifactId>demo-admin</artifactId>
+    <artifactId>admin-web</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
     <!-- ==================== -->

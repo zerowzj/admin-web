@@ -57,6 +57,7 @@
     <!--       静态资源        -->
     <!-- ==================== -->
     <mvc:resources mapping="/static/**" location="/static/"/>
+    <mvc:resources mapping="/res/**" location="/res/"/>
 
     <!-- =================== -->
     <!--         其他        -->

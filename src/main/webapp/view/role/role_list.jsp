@@ -9,39 +9,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body>
-<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
-    <legend>基本表格</legend>
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+    <legend>默认表格</legend>
 </fieldset>
-
-<table class="layui-table" lay-data="{height:313, url:'/api/role/list'}">
-    <thead>
-    <tr>
-        <th lay-data="{field:'id', width:80, sort: true}">ID</th>
-        <th lay-data="{field:'username', width:80}">用户名</th>
-        <th lay-data="{field:'sex', width:80, sort: true}">性别</th>
-        <th lay-data="{field:'city', width:80}">城市</th>
-        <th lay-data="{field:'sign', width:177}">签名</th>
-        <th lay-data="{field:'experience', width:80, sort: true}">积分</th>
-        <th lay-data="{field:'score', width:80, sort: true}">评分</th>
-        <th lay-data="{field:'classify', width:80}">职业</th>
-        <th lay-data="{field:'wealth', width:135, sort: true}">财富</th>
-    </tr>
-    </thead>
-</table>
+<div class="layui-form">
+    <form class="layui-form" id="_form" action="#" method="post">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">角色名称</label>
+                <div class="layui-input-inline">
+                    <input type="tel" name="phone" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <div class="layui-input-inline">
+                    <button class="layui-btn">查询</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <table class="layui-table">
+        <colgroup>
+            <col width="150">
+            <col width="150">
+            <col width="200">
+            <col>
+        </colgroup>
+        <thead>
+        <tr>
+            <th>人物</th>
+            <th>民族</th>
+            <th>出场时间</th>
+            <th>格言</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>贤心</td>
+            <td>汉族</td>
+            <td>1989-10-14</td>
+            <td>人生似修行</td>
+        </tr>
+        <tr>
+            <td>张爱玲</td>
+            <td>汉族</td>
+            <td>1920-09-30</td>
+            <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+        </tr>
+        <tr>
+            <td>Helen Keller</td>
+            <td>拉丁美裔</td>
+            <td>1880-06-27</td>
+            <td> Life is either a daring adventure or nothing.</td>
+        </tr>
+        <tr>
+            <td>岳飞</td>
+            <td>汉族</td>
+            <td>1103-北宋崇宁二年</td>
+            <td>教科书再滥改，也抹不去“民族英雄”的事实</td>
+        </tr>
+        <tr>
+            <td>孟子</td>
+            <td>华夏族（汉族）</td>
+            <td>公元前-372年</td>
+            <td>猿强，则国强。国强，则猿更强！</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 <div id="demo7"></div>
 <script>
-    layui.use(['table', 'laypage'], function () {
-        var table = layui.table;
-        var laypage = layui.laypage;
-        laypage.render({
-            elem: 'demo7'
-            , count: 100
-            , layout: ['count', 'prev', 'page', 'next', 'limit', 'skip']
-            , jump: function (obj) {
-                console.log(obj)
-            }
-        });
-    });
+    layui.config({
+        base: '/res/'
+    }).use('role');
 </script>
 </body>
 </html>

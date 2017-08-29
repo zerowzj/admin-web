@@ -1,4 +1,4 @@
-package com.company.project.adminweb.web.controller.role;
+package com.company.project.adminweb.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

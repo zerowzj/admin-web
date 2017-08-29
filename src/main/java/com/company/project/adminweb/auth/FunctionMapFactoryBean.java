@@ -32,7 +32,7 @@ public class FunctionMapFactoryBean implements FactoryBean<LinkedHashMap<Request
 
     @Override
     public LinkedHashMap<RequestMatcher, Collection<ConfigAttribute>> getObject() throws Exception {
-        //获取受保护功能列表
+        //TODO 受保护功能列表
         List<PopedomFunctionEO> pfEOLt = functionService.getFunctionLt(null, null);
         //生成映射
         LinkedHashMap<RequestMatcher, Collection<ConfigAttribute>> funMap = Maps.newLinkedHashMap();

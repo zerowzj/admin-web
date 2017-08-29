@@ -29,6 +29,7 @@ public class CustomUserDetailsService implements UserDetailsService {
         //用户详情
         CustomUserDetails userDetails = new CustomUserDetails(username, "123123");
 
+        //TODO 用户被授权功能列表
         List<PermissionVO> permissionVOLt = functionService.getRolePermissionLt(1L);
         //返回
         return userDetails;

@@ -13,7 +13,7 @@
         <h1>后台登录</h1>
     </header>
     <div class="beg-login-main">
-        <form action="/login.html" class="layui-form" method="post">
+        <form action="/login" class="layui-form" method="post">
             <div class="layui-form-item">
                 <label class="beg-login-icon">
                     <i class="layui-icon">&#xe612;</i>
@@ -29,10 +29,14 @@
                        class="layui-input">
             </div>
             <div class="layui-form-item">
-                <div class="beg-pull-left beg-login-remember">
-                    <label>记住帐号？</label>
-                    <input type="checkbox" name="rememberMe" value="true" lay-skin="switch" checked title="记住帐号">
-                </div>
+                <label class="beg-login-icon">
+                    <i class="layui-icon">&#xe642;</i>
+                </label>
+                <input type="password" name="loginPwd" lay-verify="loginPwd" autocomplete="off" placeholder="验证码"
+                       class="layui-input">
+            </div>
+            <div class="layui-form-item">
+
                 <div class="beg-pull-right">
                     <button class="layui-btn layui-btn-primary" lay-submit lay-filter="login">
                         <i class="layui-icon"></i> 登录

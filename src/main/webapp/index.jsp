@@ -33,7 +33,7 @@
                     <dd><a href="">安全设置</a></dd>
                 </dl>
             </li>
-            <li class="layui-nav-item"><a href="/logout.html">注销</a></li>
+            <li class="layui-nav-item"><a href="/logout">注销</a></li>
         </ul>
     </div>
 

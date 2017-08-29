@@ -46,6 +46,7 @@ public class FunctionMapFactoryBean implements FactoryBean<LinkedHashMap<Request
 //            }
             String pfPath = pfEO.getPfPath();
             if (Strings.isNullOrEmpty(pfPath)) {
+                LOGGER.info("功能[{}]Path为空", pfEO.getPfId());
                 continue;
             }
             //匹配器
@@ -56,7 +57,6 @@ public class FunctionMapFactoryBean implements FactoryBean<LinkedHashMap<Request
 
             funMap.put(matcher, configAttrLt);
         }
-
         return funMap;
     }
 

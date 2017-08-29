@@ -34,20 +34,22 @@ public class CustomUserDetailsService implements UserDetailsService {
 
         //TODO 用户被授权功能列表
         List<PermissionVO> permissionVOLt = functionService.getRolePermissionLt(1L);
-        userDetails.setGrantedAuthLt(makeGrantedAuthority(permissionVOLt));
+        List<SimpleGrantedAuthority> grantedAuthLt = makeGrantedAuthLt(permissionVOLt);
+        userDetails.setGrantedAuthLt(grantedAuthLt);
 
         //返回
         return userDetails;
     }
 
-    private List<SimpleGrantedAuthority> makeGrantedAuthority(List<PermissionVO> permissionVOLt) {
+    private List<SimpleGrantedAuthority> makeGrantedAuthLt(List<PermissionVO> permissionVOLt) {
         List<SimpleGrantedAuthority> grantedAuthLt = Lists.newArrayList();
         for (PermissionVO permissionVO : permissionVOLt) {
             String pfPath = permissionVO.getPfPath();
-            if(Strings.isNullOrEmpty(pfPath)){
+            if (Strings.isNullOrEmpty(pfPath)) {
+                LOGGER.info("功能[{}]path为空", permissionVO.getPfId());
                 continue;
             }
-            grantedAuthLt.add(new SimpleGrantedAuthority(permissionVO.getPfPath()));
+            grantedAuthLt.add(new SimpleGrantedAuthority(pfPath));
         }
         return grantedAuthLt;
     }

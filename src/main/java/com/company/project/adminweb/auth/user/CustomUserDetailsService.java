@@ -35,6 +35,7 @@ public class CustomUserDetailsService implements UserDetailsService {
         //TODO 用户被授权功能列表
         List<PermissionVO> permissionVOLt = functionService.getRolePermissionLt(1L);
         userDetails.setGrantedAuthLt(makeGrantedAuthority(permissionVOLt));
+
         //返回
         return userDetails;
     }

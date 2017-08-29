@@ -10,14 +10,14 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
     <!-- ==================== -->
     <!--                      -->
-    <!--        -->
+    <!--        Bean扫描      -->
     <!--                      -->
     <!-- ==================== -->
     <context:component-scan base-package="com.company.project">
     </context:component-scan>
     <!-- ==================== -->
     <!--                      -->
-    <!--    加载Properties    -->
+    <!--      Properties      -->
     <!--                      -->
     <!-- ==================== -->
     <context:property-placeholder location="classpath*:*.properties" ignore-unresolvable="true"/>
@@ -33,7 +33,7 @@
         <property name="password" value="${ds.druid.password}"/>
         <property name="url" value="${ds.druid.url}"/>
     </bean>
-    <!-- 回话工厂 -->
+    <!-- 会话工厂 -->
     <bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="configLocation" value="classpath:mybatis-cfg.xml"/>
@@ -59,8 +59,7 @@
     <!--                      -->
     <!-- ==================== -->
     <aop:config>
-        <aop:pointcut id="transactionPointcut"
-                      expression="execution(public * com.company.project.adminweb.service.*.*(..))"/>
+        <aop:pointcut id="transactionPointcut" expression="execution(public * com.company.project.adminweb.service.*.*(..))"/>
         <aop:advisor advice-ref="transactionAdvice" pointcut-ref="transactionPointcut"/>
     </aop:config>
 </beans>

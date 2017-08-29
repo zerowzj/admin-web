@@ -61,6 +61,7 @@ public class FunctionServiceImpl implements FunctionService {
             permissionVO.setPfId(pfId);
             permissionVO.setPfParentId(pfEO.getPfParentId());
             permissionVO.setPfName(pfEO.getPfName());
+            permissionVO.setPfPath(pfEO.getPfPath());
 
             if(rolePfIdLt.contains(pfId)){
                 permissionVO.setIsPermit("Y");

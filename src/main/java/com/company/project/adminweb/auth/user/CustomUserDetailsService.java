@@ -2,9 +2,12 @@ package com.company.project.adminweb.auth.user;
 
 import com.company.project.adminweb.service.function.FunctionService;
 import com.company.project.adminweb.service.function.PermissionVO;
+import com.google.common.base.Strings;
+import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -31,7 +34,20 @@ public class CustomUserDetailsService implements UserDetailsService {
 
         //TODO 用户被授权功能列表
         List<PermissionVO> permissionVOLt = functionService.getRolePermissionLt(1L);
+        userDetails.setGrantedAuthLt(makeGrantedAuthority(permissionVOLt));
         //返回
         return userDetails;
+    }
+
+    private List<SimpleGrantedAuthority> makeGrantedAuthority(List<PermissionVO> permissionVOLt) {
+        List<SimpleGrantedAuthority> grantedAuthLt = Lists.newArrayList();
+        for (PermissionVO permissionVO : permissionVOLt) {
+            String pfPath = permissionVO.getPfPath();
+            if(Strings.isNullOrEmpty(pfPath)){
+                continue;
+            }
+            grantedAuthLt.add(new SimpleGrantedAuthority(permissionVO.getPfPath()));
+        }
+        return grantedAuthLt;
     }
 }

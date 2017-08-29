@@ -8,7 +8,7 @@ layui.define(['layer', 'form'], function (exports) {
 
     layer.msg('Hello World');
 
-    $('#_form').ajaxForm({
+    $('#_form').ajax({
         url: '/api/role/list',
         type: 'post',
         dataType: 'json',

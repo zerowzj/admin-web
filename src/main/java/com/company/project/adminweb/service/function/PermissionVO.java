@@ -19,6 +19,11 @@ public class PermissionVO {
      * 功能名称
      */
     private String pfName;
+
+    /**
+     * 功能路径
+     */
+    private String pfPath;
     /**
      * 是否授权
      */
@@ -54,5 +59,13 @@ public class PermissionVO {
 
     public void setIsPermit(String isPermit) {
         this.isPermit = isPermit;
+    }
+
+    public String getPfPath() {
+        return pfPath;
+    }
+
+    public void setPfPath(String pfPath) {
+        this.pfPath = pfPath;
     }
 }

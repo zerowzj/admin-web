@@ -9,9 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body>
-<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-    <legend>默认表格</legend>
-</fieldset>
+
 <div class="layui-form">
     <form class="layui-form" id="_form" action="#" method="post">
         <div class="layui-form-item">
@@ -80,7 +78,7 @@
 <div id="demo7"></div>
 <script>
     layui.config({
-        base: '/res/'
+        base: '/resource/'
     }).use('role');
 </script>
 </body>

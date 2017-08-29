@@ -39,14 +39,11 @@ public class FunctionMapFactoryBean implements FactoryBean<LinkedHashMap<Request
         AntPathRequestMatcher matcher;
         List<ConfigAttribute> configAttrLt;
         for (PopedomFunctionEO pfEO : pfEOLt) {
-//            //过滤掉1级
-//            Integer pfLevel = pfEO.getPfLevel();
-//            if (pfLevel == 1) {
-//                continue;
-//            }
+            //过滤
+            Long pfId = pfEO.getPfId();
             String pfPath = pfEO.getPfPath();
             if (Strings.isNullOrEmpty(pfPath)) {
-                LOGGER.warn("功能[{}]Path为空", pfEO.getPfId());
+                LOGGER.warn("功能[{}]Path为空", pfId);
                 continue;
             }
             //匹配器

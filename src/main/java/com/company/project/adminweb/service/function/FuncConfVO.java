@@ -1,11 +1,11 @@
 package com.company.project.adminweb.service.function;
 
 /**
- * 授权VO
+ * 配置VO
  *
  * @author wangzhj
  */
-public class PermissionVO {
+public class FuncConfVO {
 
     /**
      * 功能编号

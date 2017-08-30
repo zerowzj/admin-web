@@ -42,7 +42,7 @@
         <include refid="Base_Column_List"/>
         FROM POPEDOM_FUNCTION PF
         JOIN POPEDOM_ROLE_FUNCTION PRF ON PF.PF_ID = PRF.PRF_PF_ID
-        <trim prefix="WHERE" prefixOverrides="AND|OR ">
+        <trim prefix="WHERE" prefixOverrides="AND|OR">
             <if test="prId != null">
                 PRF.PRF_PR_ID = #{prId}
             </if>

@@ -30,10 +30,10 @@ public interface FunctionService {
     Collection<MenuVO> getRoleMenuLt(Long prId);
 
     /**
-     * 获取角色授权列表
+     * 获取角色功能列表
      *
      * @param prId
-     * @return List<PermissionVO>
+     * @return List<PopedomFunctionEO>
      */
-    List<PermissionVO> getRolePermissionLt(Long prId);
+    List<PopedomFunctionEO> getRoleFunctionLt(Long prId);
 }

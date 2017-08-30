@@ -2,7 +2,6 @@ package com.company.project.adminweb.service.function;
 
 import com.company.project.adminweb.dao.popedomfunction.PopedomFunctionDao;
 import com.company.project.adminweb.dao.popedomfunction.PopedomFunctionEO;
-import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,7 +18,8 @@ public class FunctionServiceImpl implements FunctionService {
 
     @Override
     public List<PopedomFunctionEO> getFunctionLt(String pfStatus, List<Integer> pfLevelLt) {
-        return popedomFunctionDao.getFunctionLt(pfStatus, pfLevelLt);
+        List<PopedomFunctionEO> pfEOLt = popedomFunctionDao.getFunctionLt(pfStatus, pfLevelLt);
+        return pfEOLt;
     }
 
     @Override
@@ -43,34 +43,8 @@ public class FunctionServiceImpl implements FunctionService {
     }
 
     @Override
-    public List<PermissionVO> getRolePermissionLt(Long prId) {
-
-        List<PopedomFunctionEO> rolePfEOLt = popedomFunctionDao.getRoleFunctionLt(prId, null);
-        List<Long> rolePfIdLt = Lists.newArrayList();
-        for(PopedomFunctionEO pfEO : rolePfEOLt){
-            rolePfIdLt.add(pfEO.getPfId());
-        }
-
-        List<PopedomFunctionEO> pfEOLt = popedomFunctionDao.getFunctionLt(null, null);
-        List<PermissionVO> permissionVOLt = Lists.newArrayList();
-        PermissionVO permissionVO;
-        for (PopedomFunctionEO pfEO : pfEOLt) {
-            Long pfId = pfEO.getPfId();
-
-            permissionVO = new PermissionVO();
-            permissionVO.setPfId(pfId);
-            permissionVO.setPfParentId(pfEO.getPfParentId());
-            permissionVO.setPfName(pfEO.getPfName());
-            permissionVO.setPfPath(pfEO.getPfPath());
-
-            if(rolePfIdLt.contains(pfId)){
-                permissionVO.setIsPermit("Y");
-            } else {
-                permissionVO.setIsPermit("N");
-            }
-
-            permissionVOLt.add(permissionVO);
-        }
-        return permissionVOLt;
+    public List<PopedomFunctionEO> getRoleFunctionLt(Long prId) {
+        List<PopedomFunctionEO> pfEOLt = popedomFunctionDao.getRoleFunctionLt(prId, null);
+        return pfEOLt;
     }
 }

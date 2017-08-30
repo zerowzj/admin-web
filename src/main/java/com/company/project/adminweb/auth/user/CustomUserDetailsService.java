@@ -1,7 +1,7 @@
 package com.company.project.adminweb.auth.user;
 
+import com.company.project.adminweb.dao.popedomfunction.PopedomFunctionEO;
 import com.company.project.adminweb.service.function.FunctionService;
-import com.company.project.adminweb.service.function.PermissionVO;
 import com.google.common.base.Strings;
 import com.google.common.collect.Lists;
 import org.slf4j.Logger;
@@ -32,20 +32,20 @@ public class CustomUserDetailsService implements UserDetailsService {
         CustomUserDetails userDetails = new CustomUserDetails(username, "123123");
 
         //TODO 用户被授权功能列表
-        List<PermissionVO> permissionVOLt = functionService.getRolePermissionLt(1L);
-        List<SimpleGrantedAuthority> grantedAuthLt = makeGrantedAuthLt(permissionVOLt);
+        List<PopedomFunctionEO> pfEOLt = functionService.getRoleFunctionLt(1L);
+        List<SimpleGrantedAuthority> grantedAuthLt = makeGrantedAuthLt(pfEOLt);
         userDetails.setGrantedAuthLt(grantedAuthLt);
 
         //返回
         return userDetails;
     }
 
-    private List<SimpleGrantedAuthority> makeGrantedAuthLt(List<PermissionVO> permissionVOLt) {
+    private List<SimpleGrantedAuthority> makeGrantedAuthLt(List<PopedomFunctionEO> pfEOLt) {
         List<SimpleGrantedAuthority> grantedAuthLt = Lists.newArrayList();
-        for (PermissionVO permissionVO : permissionVOLt) {
-            String pfPath = permissionVO.getPfPath();
+        for (PopedomFunctionEO pfEO : pfEOLt) {
+            String pfPath = pfEO.getPfPath();
             if (Strings.isNullOrEmpty(pfPath)) {
-                LOGGER.info("功能[{}]path为空", permissionVO.getPfId());
+                LOGGER.info("功能[{}]path为空", pfEO.getPfId());
                 continue;
             }
             grantedAuthLt.add(new SimpleGrantedAuthority(pfPath));

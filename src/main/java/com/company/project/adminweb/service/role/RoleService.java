@@ -15,12 +15,15 @@ public interface RoleService {
     /**
      * 获取角色列表
      *
+     * @param prName
+     * @param pageNo
+     * @param pageSize
      * @return PageList<PopedomRoleEO>
      */
-    PageList<PopedomRoleEO> getRolePageLt(String prName, int pageNo, int pageSize);
+    PageList<PopedomRoleEO> getRolePageLt(String prName, Integer pageNo, Integer pageSize);
 
     /**
-     * 新增功能
+     * 新增角色功能
      *
      * @param prId
      * @param pfIdLt

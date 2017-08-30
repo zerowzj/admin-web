@@ -15,12 +15,14 @@ public class RoleServiceImpl implements RoleService {
     private PopedomRoleDao popedomRoleDao;
 
     @Override
-    public PageList<PopedomRoleEO> getRolePageLt(String prName, int pageNo, int pageSize) {
+    public PageList<PopedomRoleEO> getRolePageLt(String prName, Integer pageNo, Integer pageSize) {
         return popedomRoleDao.getRolePageLt(prName, pageNo, pageSize);
     }
 
     @Override
     public void addFunction(Long prId, List<Long> pfIdLt) {
+        //删除角色功能
 
+        //新增角色功能
     }
 }

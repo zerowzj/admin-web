@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 
 /**
- * Created by wangzhj on 2017/8/10.
+ * 角色API
+ *
+ * @author wangzhj
  */
 @Controller
 @RequestMapping("/api/role")
@@ -24,5 +26,10 @@ public class RoleApi {
     @Action("/list")
     public Map<String, Object> list(HttpServletRequest request, HttpServletResponse response) {
         return ActionExecutor.execute(request, response, Action_role_list.class);
+    }
+
+    @Action("/add_func")
+    public Map<String, Object> add_func(HttpServletRequest request, HttpServletResponse response) {
+        return ActionExecutor.execute(request, response, Action_role_add_func.class);
     }
 }

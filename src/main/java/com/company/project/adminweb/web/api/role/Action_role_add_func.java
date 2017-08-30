@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.util.Map;
 
 @Component
-public class Action_role_conf_func extends BaseAction {
+public class Action_role_add_func extends BaseAction {
 
     @Autowired
     private RoleService roleService;

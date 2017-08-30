@@ -25,7 +25,7 @@ public class PermissionVO {
      */
     private String pfPath;
     /**
-     * 是否授权
+     * 是否已授权
      */
     private String isPermit;
 

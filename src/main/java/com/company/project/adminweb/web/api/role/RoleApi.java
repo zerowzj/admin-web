@@ -32,4 +32,9 @@ public class RoleApi {
     public Map<String, Object> add_func(HttpServletRequest request, HttpServletResponse response) {
         return ActionExecutor.execute(request, response, Action_role_add_func.class);
     }
+
+    @Action("/modify")
+    public Map<String, Object> modify(HttpServletRequest request, HttpServletResponse response) {
+        return ActionExecutor.execute(request, response, Action_role_modify.class);
+    }
 }

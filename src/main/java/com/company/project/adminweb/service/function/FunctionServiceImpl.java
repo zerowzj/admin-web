@@ -62,13 +62,11 @@ public class FunctionServiceImpl implements FunctionService {
         ConfFuncVO confFuncVO;
         for (PopedomFunctionEO pfEO : pfEOLt) {
             Long pfId = pfEO.getPfId();
-
             confFuncVO = new ConfFuncVO();
             confFuncVO.setPfId(pfId);
             confFuncVO.setPfParentId(pfEO.getPfParentId());
             confFuncVO.setPfName(pfEO.getPfName());
             confFuncVO.setPfPath(pfEO.getPfPath());
-
             if(rolePfIdLt.contains(pfId)){
                 confFuncVO.setIsPermit("Y");
             } else {

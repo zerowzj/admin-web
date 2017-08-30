@@ -20,7 +20,7 @@ import java.util.Map;
  */
 public class MenuTag extends BaseTag {
 
-    private static final String FILE_NAME = "menu.beetl";
+    private static final String FILE_NAME = "menu.tpl";
 
     private static Template template;
 

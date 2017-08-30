@@ -22,14 +22,14 @@ public class MenuTag extends BaseTag {
 
     private static final String FILE_NAME = "menu.tpl";
 
-    private static Template template;
+    private static Template TEMPLATE;
 
     static {
         try {
             ClasspathResourceLoader loader = new ClasspathResourceLoader("");
             Configuration config = Configuration.defaultConfiguration();
             GroupTemplate gt = new GroupTemplate(loader, config);
-            template = gt.getTemplate(FILE_NAME);
+            TEMPLATE = gt.getTemplate(FILE_NAME);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -43,8 +43,8 @@ public class MenuTag extends BaseTag {
         Map data = Maps.newHashMap();
         data.put("menuVOLt", menuVOLt);
 
-        template.binding(data);
-        write(template.render());
+        TEMPLATE.binding(data);
+        write(TEMPLATE.render());
 
         return this.EVAL_PAGE;
     }

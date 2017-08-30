@@ -19,8 +19,8 @@
     <!-- ==================== -->
     <!--        映射           -->
     <!-- ==================== -->
-    <mappers>
-        <mapper resource="com/company/project/adminweb/dao/popedomfunction/PopedomFunction.xml"/>
-        <mapper resource="com/company/project/adminweb/dao/popedomrole/PopedomRole.xml"/>
-    </mappers>
+    <!--<mappers>-->
+        <!--<mapper resource="com/company/project/adminweb/dao/popedomfunction/PopedomFunction.xml"/>-->
+        <!--<mapper resource="com/company/project/adminweb/dao/popedomrole/PopedomRole.xml"/>-->
+    <!--</mappers>-->
 </configuration>

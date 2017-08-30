@@ -2,14 +2,14 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <!-- ==================== -->
-    <!--        别名           -->
+    <!--        别名          -->
     <!-- ==================== -->
     <typeAliases>
         <typeAlias type="com.company.project.adminweb.dao.popedomfunction.PopedomFunctionEO" alias="PopedomFunctionEO"/>
         <typeAlias type="com.company.project.adminweb.dao.popedomrole.PopedomRoleEO" alias="PopedomRoleEO"/>
     </typeAliases>
     <!-- ==================== -->
-    <!--        插件           -->
+    <!--        插件          -->
     <!-- ==================== -->
     <plugins>
         <plugin interceptor="com.github.miemiedev.mybatis.paginator.OffsetLimitInterceptor">

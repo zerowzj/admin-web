@@ -16,11 +16,4 @@
             <property name="dialectClass" value="com.github.miemiedev.mybatis.paginator.dialect.MySQLDialect"/>
         </plugin>
     </plugins>
-    <!-- ==================== -->
-    <!--        映射           -->
-    <!-- ==================== -->
-    <!--<mappers>-->
-        <!--<mapper resource="com/company/project/adminweb/dao/popedomfunction/PopedomFunction.xml"/>-->
-        <!--<mapper resource="com/company/project/adminweb/dao/popedomrole/PopedomRole.xml"/>-->
-    <!--</mappers>-->
 </configuration>

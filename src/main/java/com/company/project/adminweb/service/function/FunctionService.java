@@ -36,4 +36,12 @@ public interface FunctionService {
      * @return List<PopedomFunctionEO>
      */
     List<PopedomFunctionEO> getRoleFunctionLt(Long prId);
+
+    /**
+     * 获取角色功能列表
+     *
+     * @param prId
+     * @return List<ConfFuncVO>
+     */
+    List<ConfFuncVO> getRoleConfFuncLt(Long prId);
 }

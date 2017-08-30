@@ -2,6 +2,7 @@ package com.company.project.adminweb.service.function;
 
 import com.company.project.adminweb.dao.popedomfunction.PopedomFunctionDao;
 import com.company.project.adminweb.dao.popedomfunction.PopedomFunctionEO;
+import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -46,5 +47,36 @@ public class FunctionServiceImpl implements FunctionService {
     public List<PopedomFunctionEO> getRoleFunctionLt(Long prId) {
         List<PopedomFunctionEO> pfEOLt = popedomFunctionDao.getRoleFunctionLt(prId, null);
         return pfEOLt;
+    }
+
+    @Override
+    public List<ConfFuncVO> getRoleConfFuncLt(Long prId) {
+        List<PopedomFunctionEO> rolePfEOLt = popedomFunctionDao.getRoleFunctionLt(prId, null);
+        List<Long> rolePfIdLt = Lists.newArrayList();
+        for(PopedomFunctionEO pfEO : rolePfEOLt){
+            rolePfIdLt.add(pfEO.getPfId());
+        }
+
+        List<PopedomFunctionEO> pfEOLt = popedomFunctionDao.getFunctionLt(null, null);
+        List<ConfFuncVO> confFuncVOLt = Lists.newArrayList();
+        ConfFuncVO confFuncVO;
+        for (PopedomFunctionEO pfEO : pfEOLt) {
+            Long pfId = pfEO.getPfId();
+
+            confFuncVO = new ConfFuncVO();
+            confFuncVO.setPfId(pfId);
+            confFuncVO.setPfParentId(pfEO.getPfParentId());
+            confFuncVO.setPfName(pfEO.getPfName());
+            confFuncVO.setPfPath(pfEO.getPfPath());
+
+            if(rolePfIdLt.contains(pfId)){
+                confFuncVO.setIsPermit("Y");
+            } else {
+                confFuncVO.setIsPermit("N");
+            }
+
+            confFuncVOLt.add(confFuncVO);
+        }
+        return confFuncVOLt;
     }
 }

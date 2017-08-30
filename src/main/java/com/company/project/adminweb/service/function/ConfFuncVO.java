@@ -5,7 +5,7 @@ package com.company.project.adminweb.service.function;
  *
  * @author wangzhj
  */
-public class FuncConfVO {
+public class ConfFuncVO {
 
     /**
      * 功能编号

@@ -13,7 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 
 /**
- * Created by wangzhj on 2017/8/30.
+ * Api路由
+ *
+ * @author wangzhj
  */
 @Controller
 @RequestMapping("/api")

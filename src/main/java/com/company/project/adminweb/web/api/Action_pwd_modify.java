@@ -2,6 +2,7 @@ package com.company.project.adminweb.web.api;
 
 import com.company.project.adminweb.support.action.BaseAction;
 import com.company.project.adminweb.support.context.RequestContext;
+import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
@@ -10,6 +11,7 @@ import java.util.Map;
  *
  * @author wangzhj
  */
+@Component
 public class Action_pwd_modify extends BaseAction {
 
     @Override

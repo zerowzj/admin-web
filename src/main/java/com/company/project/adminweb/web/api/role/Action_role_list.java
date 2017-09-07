@@ -1,6 +1,5 @@
 package com.company.project.adminweb.web.api.role;
 
-import com.company.project.adminweb.common.util.JsonUtil;
 import com.company.project.adminweb.dao.popedomrole.PopedomRoleEO;
 import com.company.project.adminweb.service.role.RoleService;
 import com.company.project.adminweb.support.action.BaseAction;
@@ -28,7 +27,6 @@ public class Action_role_list extends BaseAction {
 
         PageList<PopedomRoleEO> pageLt = roleService.getRolePageLt(null, 1, 10);
 
-        LOGGER.info(JsonUtil.toJson(pageLt));
         Map<String, Object> data = Maps.newHashMap();
         data.put("121", "");
         data.put("", "");

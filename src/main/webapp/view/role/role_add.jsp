@@ -7,299 +7,1340 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="//res.layui.com/layui/dist/css/layui.css" media="all">
-    <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
 </head>
 <body>
-<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-    <legend>表单集合演示</legend>
-</fieldset>
+<div class="page-header">
+    <h2>
+        权限管理
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+           新增角色
+        </small>
+    </h2>
+</div><!-- /.page-header -->
+<div class="row">
+    <div class="col-xs-12">
+        <!-- PAGE CONTENT BEGINS -->
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 角色名称 </label>
+                <div class="col-sm-3">
+                    <input type="text" id="form-field-1" placeholder="Username" class="col-xs-10 col-sm-5"/>
+                </div>
+            </div>
 
-<form class="layui-form" action="">
-    <div class="layui-form-item">
-        <label class="layui-form-label">单行输入框</label>
-        <div class="layui-input-block">
-            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题"
-                   class="layui-input">
-        </div>
-    </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">验证必填项</label>
-        <div class="layui-input-block">
-            <input type="text" name="username" lay-verify="required" placeholder="请输入" autocomplete="off"
-                   class="layui-input">
-        </div>
-    </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="form-field-1-1"> Full Length </label>
 
-    <div class="layui-form-item">
-        <div class="layui-inline">
-            <label class="layui-form-label">验证手机</label>
-            <div class="layui-input-inline">
-                <input type="tel" name="phone" lay-verify="phone" autocomplete="off" class="layui-input">
+                <div class="col-sm-9">
+                    <input type="text" id="form-field-1-1" placeholder="Text Field" class="form-control"/>
+                </div>
+            </div>
+
+            <div class="space-4"></div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> Password Field </label>
+
+                <div class="col-sm-9">
+                    <input type="password" id="form-field-2" placeholder="Password" class="col-xs-10 col-sm-5"/>
+                    <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">Inline help text</span>
+											</span>
+                </div>
+            </div>
+
+            <div class="space-4"></div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="form-input-readonly"> Readonly
+                    field </label>
+
+                <div class="col-sm-9">
+                    <input readonly="" type="text" class="col-xs-10 col-sm-5" id="form-input-readonly"
+                           value="This text field is readonly!"/>
+                    <span class="help-inline col-xs-12 col-sm-7">
+												<label class="middle">
+													<input class="ace" type="checkbox" id="id-disable-check"/>
+													<span class="lbl"> Disable it!</span>
+												</label>
+											</span>
+                </div>
+            </div>
+
+            <div class="space-4"></div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="form-field-4">Relative Sizing</label>
+
+                <div class="col-sm-9">
+                    <input class="input-sm" type="text" id="form-field-4" placeholder=".input-sm"/>
+                    <div class="space-2"></div>
+
+                    <div class="help-block" id="input-size-slider"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="form-field-5">Grid Sizing</label>
+
+                <div class="col-sm-9">
+                    <div class="clearfix">
+                        <input class="col-xs-1" type="text" id="form-field-5" placeholder=".col-xs-1"/>
+                    </div>
+
+                    <div class="space-2"></div>
+
+                    <div class="help-block" id="input-span-slider"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right">Input with Icon</label>
+
+                <div class="col-sm-9">
+											<span class="input-icon">
+												<input type="text" id="form-field-icon-1"/>
+												<i class="ace-icon fa fa-leaf blue"></i>
+											</span>
+
+                    <span class="input-icon input-icon-right">
+												<input type="text" id="form-field-icon-2"/>
+												<i class="ace-icon fa fa-leaf green"></i>
+											</span>
+                </div>
+            </div>
+
+            <div class="space-4"></div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="form-field-6">Tooltip and help
+                    button</label>
+
+                <div class="col-sm-9">
+                    <input data-rel="tooltip" type="text" id="form-field-6" placeholder="Tooltip on hover"
+                           title="Hello Tooltip!" data-placement="bottom"/>
+                    <span class="help-button" data-rel="popover" data-trigger="hover" data-placement="left"
+                          data-content="More details." title="Popover on hover">?</span>
+                </div>
+            </div>
+
+            <div class="space-4"></div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="form-field-tags">Tag input</label>
+
+                <div class="col-sm-9">
+                    <div class="inline">
+                        <input type="text" name="tags" id="form-field-tags" value="Tag Input Control"
+                               placeholder="Enter tags ..."/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix form-actions">
+                <div class="col-md-offset-3 col-md-9">
+                    <button class="btn btn-info" type="button">
+                        <i class="ace-icon fa fa-check bigger-110"></i>
+                        Submit
+                    </button>
+
+                    &nbsp; &nbsp; &nbsp;
+                    <button class="btn" type="reset">
+                        <i class="ace-icon fa fa-undo bigger-110"></i>
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+            <div class="hr hr-24"></div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="widget-box">
+                        <div class="widget-header">
+                            <h4 class="widget-title">Text Area</h4>
+
+                            <div class="widget-toolbar">
+                                <a href="#" data-action="collapse">
+                                    <i class="ace-icon fa fa-chevron-up"></i>
+                                </a>
+
+                                <a href="#" data-action="close">
+                                    <i class="ace-icon fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="widget-body">
+                            <div class="widget-main">
+                                <div>
+                                    <label for="form-field-8">Default</label>
+
+                                    <textarea class="form-control" id="form-field-8"
+                                              placeholder="Default Text"></textarea>
+                                </div>
+
+                                <hr/>
+
+                                <div>
+                                    <label for="form-field-9">With Character Limit</label>
+
+                                    <textarea class="form-control limited" id="form-field-9" maxlength="50"></textarea>
+                                </div>
+
+                                <hr/>
+
+                                <div>
+                                    <label for="form-field-11">Autosize</label>
+
+                                    <textarea id="form-field-11" class="autosize-transition form-control"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.span -->
+
+                <div class="col-xs-12 col-sm-4">
+                    <div class="widget-box">
+                        <div class="widget-header">
+                            <h4 class="widget-title">Masked Input</h4>
+
+                            <span class="widget-toolbar">
+														<a href="#" data-action="settings">
+															<i class="ace-icon fa fa-cog"></i>
+														</a>
+
+														<a href="#" data-action="reload">
+															<i class="ace-icon fa fa-refresh"></i>
+														</a>
+
+														<a href="#" data-action="collapse">
+															<i class="ace-icon fa fa-chevron-up"></i>
+														</a>
+
+														<a href="#" data-action="close">
+															<i class="ace-icon fa fa-times"></i>
+														</a>
+													</span>
+                        </div>
+
+                        <div class="widget-body">
+                            <div class="widget-main">
+                                <div>
+                                    <label for="form-field-mask-1">
+                                        Date
+                                        <small class="text-success">99/99/9999</small>
+                                    </label>
+
+                                    <div class="input-group">
+                                        <input class="form-control input-mask-date" type="text" id="form-field-mask-1"/>
+                                        <span class="input-group-btn">
+																	<button class="btn btn-sm btn-default"
+                                                                            type="button">
+																		<i class="ace-icon fa fa-calendar bigger-110"></i>
+																		Go!
+																	</button>
+																</span>
+                                    </div>
+                                </div>
+
+                                <hr/>
+                                <div>
+                                    <label for="form-field-mask-2">
+                                        Phone
+                                        <small class="text-warning">(999) 999-9999</small>
+                                    </label>
+
+                                    <div class="input-group">
+																<span class="input-group-addon">
+																	<i class="ace-icon fa fa-phone"></i>
+																</span>
+
+                                        <input class="form-control input-mask-phone" type="text"
+                                               id="form-field-mask-2"/>
+                                    </div>
+                                </div>
+
+                                <hr/>
+                                <div>
+                                    <label for="form-field-mask-3">
+                                        Product Key
+                                        <small class="text-error">a*-999-a999</small>
+                                    </label>
+
+                                    <div class="input-group">
+                                        <input class="form-control input-mask-product" type="text"
+                                               id="form-field-mask-3"/>
+                                        <span class="input-group-addon">
+																	<i class="ace-icon fa fa-key"></i>
+																</span>
+                                    </div>
+                                </div>
+
+                                <hr/>
+                                <div>
+                                    <label for="form-field-mask-4">
+                                        Eye Script
+                                        <small class="text-info">~9.99 ~9.99 999</small>
+                                    </label>
+
+                                    <div>
+                                        <input class="input-medium input-mask-eyescript" type="text"
+                                               id="form-field-mask-4"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.span -->
+
+                <div class="col-xs-12 col-sm-4">
+                    <div class="widget-box">
+                        <div class="widget-header">
+                            <h4 class="widget-title">Select Box</h4>
+
+                            <span class="widget-toolbar">
+														<a href="#" data-action="settings">
+															<i class="ace-icon fa fa-cog"></i>
+														</a>
+
+														<a href="#" data-action="reload">
+															<i class="ace-icon fa fa-refresh"></i>
+														</a>
+
+														<a href="#" data-action="collapse">
+															<i class="ace-icon fa fa-chevron-up"></i>
+														</a>
+
+														<a href="#" data-action="close">
+															<i class="ace-icon fa fa-times"></i>
+														</a>
+													</span>
+                        </div>
+
+                        <div class="widget-body">
+                            <div class="widget-main">
+                                <div>
+                                    <label for="form-field-select-1">Default</label>
+
+                                    <select class="form-control" id="form-field-select-1">
+                                        <option value=""></option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="AK">Alaska</option>
+                                        <option value="AZ">Arizona</option>
+                                        <option value="AR">Arkansas</option>
+                                        <option value="CA">California</option>
+                                        <option value="CO">Colorado</option>
+                                        <option value="CT">Connecticut</option>
+                                        <option value="DE">Delaware</option>
+                                        <option value="FL">Florida</option>
+                                        <option value="GA">Georgia</option>
+                                        <option value="HI">Hawaii</option>
+                                        <option value="ID">Idaho</option>
+                                        <option value="IL">Illinois</option>
+                                        <option value="IN">Indiana</option>
+                                        <option value="IA">Iowa</option>
+                                        <option value="KS">Kansas</option>
+                                        <option value="KY">Kentucky</option>
+                                        <option value="LA">Louisiana</option>
+                                        <option value="ME">Maine</option>
+                                        <option value="MD">Maryland</option>
+                                        <option value="MA">Massachusetts</option>
+                                        <option value="MI">Michigan</option>
+                                        <option value="MN">Minnesota</option>
+                                        <option value="MS">Mississippi</option>
+                                        <option value="MO">Missouri</option>
+                                        <option value="MT">Montana</option>
+                                        <option value="NE">Nebraska</option>
+                                        <option value="NV">Nevada</option>
+                                        <option value="NH">New Hampshire</option>
+                                        <option value="NJ">New Jersey</option>
+                                        <option value="NM">New Mexico</option>
+                                        <option value="NY">New York</option>
+                                        <option value="NC">North Carolina</option>
+                                        <option value="ND">North Dakota</option>
+                                        <option value="OH">Ohio</option>
+                                        <option value="OK">Oklahoma</option>
+                                        <option value="OR">Oregon</option>
+                                        <option value="PA">Pennsylvania</option>
+                                        <option value="RI">Rhode Island</option>
+                                        <option value="SC">South Carolina</option>
+                                        <option value="SD">South Dakota</option>
+                                        <option value="TN">Tennessee</option>
+                                        <option value="TX">Texas</option>
+                                        <option value="UT">Utah</option>
+                                        <option value="VT">Vermont</option>
+                                        <option value="VA">Virginia</option>
+                                        <option value="WA">Washington</option>
+                                        <option value="WV">West Virginia</option>
+                                        <option value="WI">Wisconsin</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                </div>
+
+                                <hr/>
+                                <div>
+                                    <label for="form-field-select-2">Multiple</label>
+
+                                    <select class="form-control" id="form-field-select-2" multiple="multiple">
+                                        <option value="AL">Alabama</option>
+                                        <option value="AK">Alaska</option>
+                                        <option value="AZ">Arizona</option>
+                                        <option value="AR">Arkansas</option>
+                                        <option value="CA">California</option>
+                                        <option value="CO">Colorado</option>
+                                        <option value="CT">Connecticut</option>
+                                        <option value="DE">Delaware</option>
+                                        <option value="FL">Florida</option>
+                                        <option value="GA">Georgia</option>
+                                        <option value="HI">Hawaii</option>
+                                        <option value="ID">Idaho</option>
+                                        <option value="IL">Illinois</option>
+                                        <option value="IN">Indiana</option>
+                                        <option value="IA">Iowa</option>
+                                        <option value="KS">Kansas</option>
+                                        <option value="KY">Kentucky</option>
+                                        <option value="LA">Louisiana</option>
+                                        <option value="ME">Maine</option>
+                                        <option value="MD">Maryland</option>
+                                        <option value="MA">Massachusetts</option>
+                                        <option value="MI">Michigan</option>
+                                        <option value="MN">Minnesota</option>
+                                        <option value="MS">Mississippi</option>
+                                        <option value="MO">Missouri</option>
+                                        <option value="MT">Montana</option>
+                                        <option value="NE">Nebraska</option>
+                                        <option value="NV">Nevada</option>
+                                        <option value="NH">New Hampshire</option>
+                                        <option value="NJ">New Jersey</option>
+                                        <option value="NM">New Mexico</option>
+                                        <option value="NY">New York</option>
+                                        <option value="NC">North Carolina</option>
+                                        <option value="ND">North Dakota</option>
+                                        <option value="OH">Ohio</option>
+                                        <option value="OK">Oklahoma</option>
+                                        <option value="OR">Oregon</option>
+                                        <option value="PA">Pennsylvania</option>
+                                        <option value="RI">Rhode Island</option>
+                                        <option value="SC">South Carolina</option>
+                                        <option value="SD">South Dakota</option>
+                                        <option value="TN">Tennessee</option>
+                                        <option value="TX">Texas</option>
+                                        <option value="UT">Utah</option>
+                                        <option value="VT">Vermont</option>
+                                        <option value="VA">Virginia</option>
+                                        <option value="WA">Washington</option>
+                                        <option value="WV">West Virginia</option>
+                                        <option value="WI">Wisconsin</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                </div>
+
+                                <hr/>
+
+                                <div>
+                                    <label for="form-field-select-3">Chosen</label>
+
+                                    <br/>
+                                    <select class="chosen-select form-control" id="form-field-select-3"
+                                            data-placeholder="Choose a State...">
+                                        <option value=""></option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="AK">Alaska</option>
+                                        <option value="AZ">Arizona</option>
+                                        <option value="AR">Arkansas</option>
+                                        <option value="CA">California</option>
+                                        <option value="CO">Colorado</option>
+                                        <option value="CT">Connecticut</option>
+                                        <option value="DE">Delaware</option>
+                                        <option value="FL">Florida</option>
+                                        <option value="GA">Georgia</option>
+                                        <option value="HI">Hawaii</option>
+                                        <option value="ID">Idaho</option>
+                                        <option value="IL">Illinois</option>
+                                        <option value="IN">Indiana</option>
+                                        <option value="IA">Iowa</option>
+                                        <option value="KS">Kansas</option>
+                                        <option value="KY">Kentucky</option>
+                                        <option value="LA">Louisiana</option>
+                                        <option value="ME">Maine</option>
+                                        <option value="MD">Maryland</option>
+                                        <option value="MA">Massachusetts</option>
+                                        <option value="MI">Michigan</option>
+                                        <option value="MN">Minnesota</option>
+                                        <option value="MS">Mississippi</option>
+                                        <option value="MO">Missouri</option>
+                                        <option value="MT">Montana</option>
+                                        <option value="NE">Nebraska</option>
+                                        <option value="NV">Nevada</option>
+                                        <option value="NH">New Hampshire</option>
+                                        <option value="NJ">New Jersey</option>
+                                        <option value="NM">New Mexico</option>
+                                        <option value="NY">New York</option>
+                                        <option value="NC">North Carolina</option>
+                                        <option value="ND">North Dakota</option>
+                                        <option value="OH">Ohio</option>
+                                        <option value="OK">Oklahoma</option>
+                                        <option value="OR">Oregon</option>
+                                        <option value="PA">Pennsylvania</option>
+                                        <option value="RI">Rhode Island</option>
+                                        <option value="SC">South Carolina</option>
+                                        <option value="SD">South Dakota</option>
+                                        <option value="TN">Tennessee</option>
+                                        <option value="TX">Texas</option>
+                                        <option value="UT">Utah</option>
+                                        <option value="VT">Vermont</option>
+                                        <option value="VA">Virginia</option>
+                                        <option value="WA">Washington</option>
+                                        <option value="WV">West Virginia</option>
+                                        <option value="WI">Wisconsin</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                </div>
+
+                                <hr/>
+                                <div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <span class="bigger-110">Multiple</span>
+                                        </div><!-- /.span -->
+
+                                        <div class="col-sm-6">
+																	<span class="pull-right inline">
+																		<span class="grey">style:</span>
+
+																		<span class="btn-toolbar inline middle no-margin">
+																			<span id="chosen-multiple-style"
+                                                                                  data-toggle="buttons"
+                                                                                  class="btn-group no-margin">
+																				<label class="btn btn-xs btn-yellow active">
+																					1
+																					<input type="radio" value="1"/>
+																				</label>
+
+																				<label class="btn btn-xs btn-yellow">
+																					2
+																					<input type="radio" value="2"/>
+																				</label>
+																			</span>
+																		</span>
+																	</span>
+                                        </div><!-- /.span -->
+                                    </div>
+
+                                    <div class="space-2"></div>
+
+                                    <select multiple="" class="chosen-select form-control" id="form-field-select-4"
+                                            data-placeholder="Choose a State...">
+                                        <option value="AL">Alabama</option>
+                                        <option value="AK">Alaska</option>
+                                        <option value="AZ">Arizona</option>
+                                        <option value="AR">Arkansas</option>
+                                        <option value="CA">California</option>
+                                        <option value="CO">Colorado</option>
+                                        <option value="CT">Connecticut</option>
+                                        <option value="DE">Delaware</option>
+                                        <option value="FL">Florida</option>
+                                        <option value="GA">Georgia</option>
+                                        <option value="HI">Hawaii</option>
+                                        <option value="ID">Idaho</option>
+                                        <option value="IL">Illinois</option>
+                                        <option value="IN">Indiana</option>
+                                        <option value="IA">Iowa</option>
+                                        <option value="KS">Kansas</option>
+                                        <option value="KY">Kentucky</option>
+                                        <option value="LA">Louisiana</option>
+                                        <option value="ME">Maine</option>
+                                        <option value="MD">Maryland</option>
+                                        <option value="MA">Massachusetts</option>
+                                        <option value="MI">Michigan</option>
+                                        <option value="MN">Minnesota</option>
+                                        <option value="MS">Mississippi</option>
+                                        <option value="MO">Missouri</option>
+                                        <option value="MT">Montana</option>
+                                        <option value="NE">Nebraska</option>
+                                        <option value="NV">Nevada</option>
+                                        <option value="NH">New Hampshire</option>
+                                        <option value="NJ">New Jersey</option>
+                                        <option value="NM">New Mexico</option>
+                                        <option value="NY">New York</option>
+                                        <option value="NC">North Carolina</option>
+                                        <option value="ND">North Dakota</option>
+                                        <option value="OH">Ohio</option>
+                                        <option value="OK">Oklahoma</option>
+                                        <option value="OR">Oregon</option>
+                                        <option value="PA">Pennsylvania</option>
+                                        <option value="RI">Rhode Island</option>
+                                        <option value="SC">South Carolina</option>
+                                        <option value="SD">South Dakota</option>
+                                        <option value="TN">Tennessee</option>
+                                        <option value="TX">Texas</option>
+                                        <option value="UT">Utah</option>
+                                        <option value="VT">Vermont</option>
+                                        <option value="VA">Virginia</option>
+                                        <option value="WA">Washington</option>
+                                        <option value="WV">West Virginia</option>
+                                        <option value="WI">Wisconsin</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.span -->
+            </div><!-- /.row -->
+
+            <div class="space-24"></div>
+
+            <h3 class="header smaller lighter blue">
+                Checkboxes & Radio
+                <small>All Checkboxes, Radios and Switch Buttons Are Pure CSS</small>
+            </h3>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-5">
+                    <div class="control-group">
+                        <label class="control-label bolder blue">Checkbox</label>
+
+                        <div class="checkbox">
+                            <label>
+                                <input name="form-field-checkbox" type="checkbox" class="ace"/>
+                                <span class="lbl"> choice 1</span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox">
+                            <label>
+                                <input name="form-field-checkbox" type="checkbox" class="ace"/>
+                                <span class="lbl"> choice 2</span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox">
+                            <label>
+                                <input name="form-field-checkbox" class="ace ace-checkbox-2" type="checkbox"/>
+                                <span class="lbl"> choice 3</span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox">
+                            <label class="block">
+                                <input name="form-field-checkbox" disabled="" type="checkbox" class="ace"/>
+                                <span class="lbl"> disabled</span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox">
+                            <label class="block">
+                                <input name="form-field-checkbox" type="checkbox" class="ace input-lg"/>
+                                <span class="lbl bigger-120"> large checkbox</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6">
+                    <div class="control-group">
+                        <label class="control-label bolder blue">Radio</label>
+
+                        <div class="radio">
+                            <label>
+                                <input name="form-field-radio" type="radio" class="ace"/>
+                                <span class="lbl"> radio option 1</span>
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input name="form-field-radio" type="radio" class="ace"/>
+                                <span class="lbl"> radio option 2</span>
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input name="form-field-radio" type="radio" class="ace"/>
+                                <span class="lbl"> radio option 3</span>
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input disabled="" name="form-field-radio" type="radio" class="ace"/>
+                                <span class="lbl"> disabled</span>
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input name="form-field-radio" type="radio" class="ace input-lg"/>
+                                <span class="lbl bigger-120"> large radio</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.row -->
+
+            <hr/>
+            <div class="form-group">
+                <label class="control-label col-xs-12 col-sm-3">On/Off Switches</label>
+
+                <div class="controls col-xs-12 col-sm-9">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <label>
+                                <input name="switch-field-1" class="ace ace-switch" type="checkbox"/>
+                                <span class="lbl"></span>
+                            </label>
+                        </div>
+
+                        <div class="col-xs-3">
+                            <label>
+                                <input name="switch-field-1" class="ace ace-switch ace-switch-2" type="checkbox"/>
+                                <span class="lbl"></span>
+                            </label>
+                        </div>
+
+                        <div class="col-xs-3">
+                            <label>
+                                <input name="switch-field-1" class="ace ace-switch ace-switch-3" type="checkbox"/>
+                                <span class="lbl"></span>
+                            </label>
+                        </div>
+
+                        <div class="col-xs-3">
+                            <label>
+                                <input name="switch-field-1" class="ace ace-switch" type="checkbox"/>
+                                <span class="lbl" data-lbl="CUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TOM"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <label>
+                                <input name="switch-field-1" class="ace ace-switch ace-switch-4" type="checkbox"/>
+                                <span class="lbl"></span>
+                            </label>
+                        </div>
+
+                        <div class="col-xs-3">
+                            <label>
+                                <input name="switch-field-1" class="ace ace-switch ace-switch-5" type="checkbox"/>
+                                <span class="lbl"></span>
+                            </label>
+                        </div>
+
+                        <div class="col-xs-3">
+                            <label>
+                                <input name="switch-field-1" class="ace ace-switch ace-switch-6" type="checkbox"/>
+                                <span class="lbl"></span>
+                            </label>
+                        </div>
+
+                        <div class="col-xs-3">
+                            <label>
+                                <input name="switch-field-1" class="ace ace-switch ace-switch-7" type="checkbox"/>
+                                <span class="lbl"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <label>
+                                <input name="switch-field-1" class="ace ace-switch btn-rotate" type="checkbox"/>
+                                <span class="lbl"></span>
+                            </label>
+                        </div>
+
+                        <div class="col-xs-3">
+                            <label>
+                                <input name="switch-field-1" class="ace ace-switch ace-switch-4 btn-rotate"
+                                       type="checkbox"/>
+                                <span class="lbl"></span>
+                            </label>
+                        </div>
+
+                        <div class="col-xs-3">
+                            <label>
+                                <input name="switch-field-1" class="ace ace-switch ace-switch-4 btn-empty"
+                                       type="checkbox"/>
+                                <span class="lbl"></span>
+                            </label>
+                        </div>
+
+                        <div class="col-xs-3">
+                            <label>
+                                <input name="switch-field-1" class="ace ace-switch ace-switch-4 btn-flat"
+                                       type="checkbox"/>
+                                <span class="lbl"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr/>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="widget-box">
+                        <div class="widget-header">
+                            <h4 class="widget-title">Custom File Input</h4>
+
+                            <div class="widget-toolbar">
+                                <a href="#" data-action="collapse">
+                                    <i class="ace-icon fa fa-chevron-up"></i>
+                                </a>
+
+                                <a href="#" data-action="close">
+                                    <i class="ace-icon fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="widget-body">
+                            <div class="widget-main">
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <input type="file" id="id-input-file-2"/>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <input multiple="" type="file" id="id-input-file-3"/>
+                                    </div>
+                                </div>
+
+                                <label>
+                                    <input type="checkbox" name="file-format" id="id-file-format" class="ace"/>
+                                    <span class="lbl"> Allow only images</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="widget-box">
+                        <div class="widget-header">
+                            <h4 class="widget-title">jQuery UI Sliders</h4>
+                        </div>
+
+                        <div class="widget-body">
+                            <div class="widget-main">
+                                <div class="row">
+                                    <div class="col-xs-3 col-md-2">
+                                        <div id="slider-range"></div>
+                                    </div>
+
+                                    <div class="col-xs-9 col-md-10">
+                                        <div id="slider-eq">
+                                            <span class="ui-slider-green ui-slider-small">77</span>
+                                            <span class="ui-slider-red">55</span>
+                                            <span class="ui-slider-purple" data-rel="tooltip"
+                                                  title="Disabled!">33</span>
+                                            <span class="ui-slider-simple ui-slider-orange">40</span>
+                                            <span class="ui-slider-simple ui-slider-dark">88</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="widget-box">
+                        <div class="widget-header">
+                            <h4 class="widget-title">Spinners</h4>
+                        </div>
+
+                        <div class="widget-body">
+                            <div class="widget-main">
+                                <input type="text" id="spinner1"/>
+                                <div class="space-6"></div>
+
+                                <input type="text" class="input-sm" id="spinner2"/>
+                                <div class="space-6"></div>
+
+                                <input type="text" id="spinner3"/>
+                                <div class="space-6"></div>
+
+                                <input type="text" class="input-lg" id="spinner4"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr/>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="widget-box">
+                        <div class="widget-header">
+                            <h4 class="widget-title">Date Picker</h4>
+
+                            <span class="widget-toolbar">
+														<a href="#" data-action="settings">
+															<i class="ace-icon fa fa-cog"></i>
+														</a>
+
+														<a href="#" data-action="reload">
+															<i class="ace-icon fa fa-refresh"></i>
+														</a>
+
+														<a href="#" data-action="collapse">
+															<i class="ace-icon fa fa-chevron-up"></i>
+														</a>
+
+														<a href="#" data-action="close">
+															<i class="ace-icon fa fa-times"></i>
+														</a>
+													</span>
+                        </div>
+
+                        <div class="widget-body">
+                            <div class="widget-main">
+                                <label for="id-date-picker-1">Date Picker</label>
+
+                                <div class="row">
+                                    <div class="col-xs-8 col-sm-11">
+                                        <div class="input-group">
+                                            <input class="form-control date-picker" id="id-date-picker-1" type="text"
+                                                   data-date-format="dd-mm-yyyy"/>
+                                            <span class="input-group-addon">
+																		<i class="fa fa-calendar bigger-110"></i>
+																	</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="space space-8"></div>
+                                <label>Range Picker</label>
+
+                                <div class="row">
+                                    <div class="col-xs-8 col-sm-11">
+                                        <div class="input-daterange input-group">
+                                            <input type="text" class="input-sm form-control" name="start"/>
+                                            <span class="input-group-addon">
+																		<i class="fa fa-exchange"></i>
+																	</span>
+
+                                            <input type="text" class="input-sm form-control" name="end"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr/>
+                                <label for="id-date-range-picker-1">Date Range Picker</label>
+
+                                <div class="row">
+                                    <div class="col-xs-8 col-sm-11">
+                                        <div class="input-group">
+																	<span class="input-group-addon">
+																		<i class="fa fa-calendar bigger-110"></i>
+																	</span>
+
+                                            <input class="form-control" type="text" name="date-range-picker"
+                                                   id="id-date-range-picker-1"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr/>
+                                <label for="timepicker1">Time Picker</label>
+
+                                <div class="input-group bootstrap-timepicker">
+                                    <input id="timepicker1" type="text" class="form-control"/>
+                                    <span class="input-group-addon">
+																<i class="fa fa-clock-o bigger-110"></i>
+															</span>
+                                </div>
+
+                                <hr/>
+                                <label for="date-timepicker1">Date/Time Picker</label>
+
+                                <div class="input-group">
+                                    <input id="date-timepicker1" type="text" class="form-control"/>
+                                    <span class="input-group-addon">
+																<i class="fa fa-clock-o bigger-110"></i>
+															</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="widget-box">
+                        <div class="widget-header">
+                            <h4 class="widget-title">
+                                <i class="ace-icon fa fa-tint"></i>
+                                Color Picker
+                            </h4>
+                        </div>
+
+                        <div class="widget-body">
+                            <div class="widget-main">
+                                <div class="clearfix">
+                                    <label for="colorpicker1">Color Picker</label>
+                                </div>
+
+                                <div class="control-group">
+                                    <div class="bootstrap-colorpicker">
+                                        <input id="colorpicker1" type="text" class="input-small"/>
+                                    </div>
+                                </div>
+
+                                <hr/>
+
+                                <div>
+                                    <label for="simple-colorpicker-1">Custom Color Picker</label>
+
+                                    <select id="simple-colorpicker-1" class="hide">
+                                        <option value="#ac725e">#ac725e</option>
+                                        <option value="#d06b64">#d06b64</option>
+                                        <option value="#f83a22">#f83a22</option>
+                                        <option value="#fa573c">#fa573c</option>
+                                        <option value="#ff7537">#ff7537</option>
+                                        <option value="#ffad46" selected="">#ffad46</option>
+                                        <option value="#42d692">#42d692</option>
+                                        <option value="#16a765">#16a765</option>
+                                        <option value="#7bd148">#7bd148</option>
+                                        <option value="#b3dc6c">#b3dc6c</option>
+                                        <option value="#fbe983">#fbe983</option>
+                                        <option value="#fad165">#fad165</option>
+                                        <option value="#92e1c0">#92e1c0</option>
+                                        <option value="#9fe1e7">#9fe1e7</option>
+                                        <option value="#9fc6e7">#9fc6e7</option>
+                                        <option value="#4986e7">#4986e7</option>
+                                        <option value="#9a9cff">#9a9cff</option>
+                                        <option value="#b99aff">#b99aff</option>
+                                        <option value="#c2c2c2">#c2c2c2</option>
+                                        <option value="#cabdbf">#cabdbf</option>
+                                        <option value="#cca6ac">#cca6ac</option>
+                                        <option value="#f691b2">#f691b2</option>
+                                        <option value="#cd74e6">#cd74e6</option>
+                                        <option value="#a47ae2">#a47ae2</option>
+                                        <option value="#555">#555</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="widget-box">
+                        <div class="widget-header">
+                            <h4 class="widget-title">
+                                <i class="ace-icon fa fa-tachometer"></i>
+                                Knob Input
+                            </h4>
+                        </div>
+
+                        <div class="widget-body">
+                            <div class="widget-main">
+                                <div class="control-group">
+                                    <div class="row">
+                                        <div class="col-xs-6 center">
+                                            <div class="knob-container inline">
+                                                <input type="text" class="input-small knob" value="15" data-min="0"
+                                                       data-max="100" data-step="10" data-width="80" data-height="80"
+                                                       data-thickness=".2"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-6  center">
+                                            <div class="knob-container inline">
+                                                <input type="text" class="input-small knob" value="41" data-min="0"
+                                                       data-max="100" data-width="80" data-height="80"
+                                                       data-thickness=".2" data-fgcolor="#87B87F"
+                                                       data-displayprevious="true" data-anglearc="250"
+                                                       data-angleoffset="-125"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xs-12 center">
+                                            <div class="knob-container inline">
+                                                <input type="text" class="input-small knob" value="1" data-min="0"
+                                                       data-max="10" data-width="150" data-height="150"
+                                                       data-thickness=".2" data-fgcolor="#B8877F" data-angleoffset="90"
+                                                       data-cursor="true"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="hr hr-18 dotted hr-double"></div>
+
+        <h4 class="pink">
+            <i class="ace-icon fa fa-hand-o-right green"></i>
+            <a href="#modal-form" role="button" class="blue" data-toggle="modal"> Form Inside a Modal Box </a>
+        </h4>
+
+        <div class="hr hr-18 dotted hr-double"></div>
+        <h4 class="header green">Form Layouts</h4>
+
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="widget-box">
+                    <div class="widget-header">
+                        <h4 class="widget-title">Default</h4>
+                    </div>
+
+                    <div class="widget-body">
+                        <div class="widget-main no-padding">
+                            <form>
+                                <!-- <legend>Form</legend> -->
+                                <fieldset>
+                                    <label>Label name</label>
+
+                                    <input type="text" placeholder="Type something&hellip;"/>
+                                    <span class="help-block">Example block-level help text here.</span>
+
+                                    <label class="pull-right">
+                                        <input type="checkbox" class="ace"/>
+                                        <span class="lbl"> check me out</span>
+                                    </label>
+                                </fieldset>
+
+                                <div class="form-actions center">
+                                    <button type="button" class="btn btn-sm btn-success">
+                                        Submit
+                                        <i class="ace-icon fa fa-arrow-right icon-on-right bigger-110"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-7">
+                <div class="widget-box">
+                    <div class="widget-header">
+                        <h4 class="widget-title">Inline Forms</h4>
+                    </div>
+
+                    <div class="widget-body">
+                        <div class="widget-main">
+                            <form class="form-inline">
+                                <input type="text" class="input-small" placeholder="Username"/>
+                                <input type="password" class="input-small" placeholder="Password"/>
+                                <label class="inline">
+                                    <input type="checkbox" class="ace"/>
+                                    <span class="lbl"> remember me</span>
+                                </label>
+
+                                <button type="button" class="btn btn-info btn-sm">
+                                    <i class="ace-icon fa fa-key bigger-110"></i>Login
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-6"></div>
+
+                <div class="widget-box">
+                    <div class="widget-header widget-header-small">
+                        <h5 class="widget-title lighter">Search Form</h5>
+                    </div>
+
+                    <div class="widget-body">
+                        <div class="widget-main">
+                            <form class="form-search">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-8">
+                                        <div class="input-group">
+																	<span class="input-group-addon">
+																		<i class="ace-icon fa fa-check"></i>
+																	</span>
+
+                                            <input type="text" class="form-control search-query"
+                                                   placeholder="Type your query"/>
+                                            <span class="input-group-btn">
+																		<button type="button"
+                                                                                class="btn btn-purple btn-sm">
+																			<span class="ace-icon fa fa-search icon-on-right bigger-110"></span>
+																			Search
+																		</button>
+																	</span>
+                                        </div>
+
+                                        <div class="hr"></div>
+
+                                        <div class="input-group input-group-lg">
+																	<span class="input-group-addon">
+																		<i class="ace-icon fa fa-check"></i>
+																	</span>
+
+                                            <input type="text" class="form-control search-query"
+                                                   placeholder="Type your query"/>
+                                            <span class="input-group-btn">
+																		<button type="button"
+                                                                                class="btn btn-default btn-lg">
+																			<span class="ace-icon fa fa-search icon-on-right bigger-110"></span>
+																			Search
+																		</button>
+																	</span>
+                                        </div>
+
+                                        <div class="hr"></div>
+
+                                        <div class="input-group">
+																	<span class="input-group-addon">
+																		<i class="ace-icon fa fa-check"></i>
+																	</span>
+
+                                            <input type="text" class="form-control search-query"
+                                                   placeholder="Type your query"/>
+                                            <span class="input-group-btn">
+																		<button type="button"
+                                                                                class="btn btn-inverse btn-white">
+																			<span class="ace-icon fa fa-search icon-on-right bigger-110"></span>
+																			Search
+																		</button>
+																	</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="layui-inline">
-            <label class="layui-form-label">验证邮箱</label>
-            <div class="layui-input-inline">
-                <input type="text" name="email" lay-verify="email" autocomplete="off" class="layui-input">
+
+        <div id="modal-form" class="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="blue bigger">Please fill the following form fields</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-5">
+                                <div class="space"></div>
+
+                                <input type="file"/>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-7">
+                                <div class="form-group">
+                                    <label for="form-field-select-3">Location</label>
+
+                                    <div>
+                                        <select class="chosen-select" data-placeholder="Choose a Country...">
+                                            <option value="">&nbsp;</option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="AK">Alaska</option>
+                                            <option value="AZ">Arizona</option>
+                                            <option value="AR">Arkansas</option>
+                                            <option value="CA">California</option>
+                                            <option value="CO">Colorado</option>
+                                            <option value="CT">Connecticut</option>
+                                            <option value="DE">Delaware</option>
+                                            <option value="FL">Florida</option>
+                                            <option value="GA">Georgia</option>
+                                            <option value="HI">Hawaii</option>
+                                            <option value="ID">Idaho</option>
+                                            <option value="IL">Illinois</option>
+                                            <option value="IN">Indiana</option>
+                                            <option value="IA">Iowa</option>
+                                            <option value="KS">Kansas</option>
+                                            <option value="KY">Kentucky</option>
+                                            <option value="LA">Louisiana</option>
+                                            <option value="ME">Maine</option>
+                                            <option value="MD">Maryland</option>
+                                            <option value="MA">Massachusetts</option>
+                                            <option value="MI">Michigan</option>
+                                            <option value="MN">Minnesota</option>
+                                            <option value="MS">Mississippi</option>
+                                            <option value="MO">Missouri</option>
+                                            <option value="MT">Montana</option>
+                                            <option value="NE">Nebraska</option>
+                                            <option value="NV">Nevada</option>
+                                            <option value="NH">New Hampshire</option>
+                                            <option value="NJ">New Jersey</option>
+                                            <option value="NM">New Mexico</option>
+                                            <option value="NY">New York</option>
+                                            <option value="NC">North Carolina</option>
+                                            <option value="ND">North Dakota</option>
+                                            <option value="OH">Ohio</option>
+                                            <option value="OK">Oklahoma</option>
+                                            <option value="OR">Oregon</option>
+                                            <option value="PA">Pennsylvania</option>
+                                            <option value="RI">Rhode Island</option>
+                                            <option value="SC">South Carolina</option>
+                                            <option value="SD">South Dakota</option>
+                                            <option value="TN">Tennessee</option>
+                                            <option value="TX">Texas</option>
+                                            <option value="UT">Utah</option>
+                                            <option value="VT">Vermont</option>
+                                            <option value="VA">Virginia</option>
+                                            <option value="WA">Washington</option>
+                                            <option value="WV">West Virginia</option>
+                                            <option value="WI">Wisconsin</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="space-4"></div>
+
+                                <div class="form-group">
+                                    <label for="form-field-username">Username</label>
+
+                                    <div>
+                                        <input type="text" id="form-field-username" placeholder="Username"
+                                               value="alexdoe"/>
+                                    </div>
+                                </div>
+
+                                <div class="space-4"></div>
+
+                                <div class="form-group">
+                                    <label for="form-field-first">Name</label>
+
+                                    <div>
+                                        <input type="text" id="form-field-first" placeholder="First Name" value="Alex"/>
+                                        <input type="text" id="form-field-last" placeholder="Last Name" value="Doe"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-sm" data-dismiss="modal">
+                            <i class="ace-icon fa fa-times"></i>
+                            Cancel
+                        </button>
+
+                        <button class="btn btn-sm btn-primary">
+                            <i class="ace-icon fa fa-check"></i>
+                            Save
+                        </button>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-
-    <div class="layui-form-item">
-        <div class="layui-inline">
-            <label class="layui-form-label">多规则验证</label>
-            <div class="layui-input-inline">
-                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
-            </div>
-        </div>
-        <div class="layui-inline">
-            <label class="layui-form-label">验证日期</label>
-            <div class="layui-input-inline">
-                <input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off"
-                       class="layui-input">
-            </div>
-        </div>
-        <div class="layui-inline">
-            <label class="layui-form-label">验证链接</label>
-            <div class="layui-input-inline">
-                <input type="tel" name="url" lay-verify="url" autocomplete="off" class="layui-input">
-            </div>
-        </div>
-    </div>
-
-    <div class="layui-form-item">
-        <label class="layui-form-label">验证身份证</label>
-        <div class="layui-input-block">
-            <input type="text" name="identity" lay-verify="identity" placeholder="" autocomplete="off"
-                   class="layui-input">
-        </div>
-    </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">自定义验证</label>
-        <div class="layui-input-inline">
-            <input type="password" name="password" lay-verify="pass" placeholder="请输入密码" autocomplete="off"
-                   class="layui-input">
-        </div>
-        <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
-    </div>
-
-    <div class="layui-form-item">
-        <div class="layui-inline">
-            <label class="layui-form-label">范围</label>
-            <div class="layui-input-inline" style="width: 100px;">
-                <input type="text" name="price_min" placeholder="￥" autocomplete="off" class="layui-input">
-            </div>
-            <div class="layui-form-mid">-</div>
-            <div class="layui-input-inline" style="width: 100px;">
-                <input type="text" name="price_max" placeholder="￥" autocomplete="off" class="layui-input">
-            </div>
-        </div>
-    </div>
-
-    <div class="layui-form-item">
-        <label class="layui-form-label">单行选择框</label>
-        <div class="layui-input-block">
-            <select name="interest" lay-filter="aihao">
-                <option value=""></option>
-                <option value="0">写作</option>
-                <option value="1" selected="">阅读</option>
-                <option value="2">游戏</option>
-                <option value="3">音乐</option>
-                <option value="4">旅行</option>
-            </select>
-        </div>
-    </div>
-
-
-    <div class="layui-form-item">
-        <div class="layui-inline">
-            <label class="layui-form-label">分组选择框</label>
-            <div class="layui-input-inline">
-                <select name="quiz">
-                    <option value="">请选择问题</option>
-                    <optgroup label="城市记忆">
-                        <option value="你工作的第一个城市">你工作的第一个城市</option>
-                    </optgroup>
-                    <optgroup label="学生时代">
-                        <option value="你的工号">你的工号</option>
-                        <option value="你最喜欢的老师">你最喜欢的老师</option>
-                    </optgroup>
-                </select>
-            </div>
-        </div>
-        <div class="layui-inline">
-            <label class="layui-form-label">搜索选择框</label>
-            <div class="layui-input-inline">
-                <select name="modules" lay-verify="required" lay-search="">
-                    <option value="">直接选择或搜索选择</option>
-                    <option value="1">layer</option>
-                    <option value="2">form</option>
-                    <option value="3">layim</option>
-                    <option value="4">element</option>
-                    <option value="5">laytpl</option>
-                    <option value="6">upload</option>
-                    <option value="7">laydate</option>
-                    <option value="8">laypage</option>
-                    <option value="9">flow</option>
-                    <option value="10">util</option>
-                    <option value="11">code</option>
-                    <option value="12">tree</option>
-                    <option value="13">layedit</option>
-                    <option value="14">nav</option>
-                    <option value="15">tab</option>
-                    <option value="16">table</option>
-                    <option value="17">select</option>
-                    <option value="18">checkbox</option>
-                    <option value="19">switch</option>
-                    <option value="20">radio</option>
-                </select>
-            </div>
-        </div>
-    </div>
-
-    <div class="layui-form-item">
-        <label class="layui-form-label">联动选择框</label>
-        <div class="layui-input-inline">
-            <select name="quiz1">
-                <option value="">请选择省</option>
-                <option value="浙江" selected="">浙江省</option>
-                <option value="你的工号">江西省</option>
-                <option value="你最喜欢的老师">福建省</option>
-            </select>
-        </div>
-        <div class="layui-input-inline">
-            <select name="quiz2">
-                <option value="">请选择市</option>
-                <option value="杭州">杭州</option>
-                <option value="宁波" disabled="">宁波</option>
-                <option value="温州">温州</option>
-                <option value="温州">台州</option>
-                <option value="温州">绍兴</option>
-            </select>
-        </div>
-        <div class="layui-input-inline">
-            <select name="quiz3">
-                <option value="">请选择县/区</option>
-                <option value="西湖区">西湖区</option>
-                <option value="余杭区">余杭区</option>
-                <option value="拱墅区">临安市</option>
-            </select>
-        </div>
-        <div class="layui-form-mid layui-word-aux">此处只是演示联动排版，并未做联动交互</div>
-    </div>
-
-    <div class="layui-form-item">
-        <label class="layui-form-label">复选框</label>
-        <div class="layui-input-block">
-            <input type="checkbox" name="like[write]" title="写作">
-            <input type="checkbox" name="like[read]" title="阅读" checked="">
-            <input type="checkbox" name="like[game]" title="游戏">
-        </div>
-    </div>
-
-    <div class="layui-form-item" pane="">
-        <label class="layui-form-label">原始复选框</label>
-        <div class="layui-input-block">
-            <input type="checkbox" name="like1[write]" lay-skin="primary" title="写作" checked="">
-            <input type="checkbox" name="like1[read]" lay-skin="primary" title="阅读">
-            <input type="checkbox" name="like1[game]" lay-skin="primary" title="游戏" disabled="">
-        </div>
-    </div>
-
-    <div class="layui-form-item">
-        <label class="layui-form-label">开关-默认关</label>
-        <div class="layui-input-block">
-            <input type="checkbox" name="close" lay-skin="switch" lay-text="ON|OFF">
-        </div>
-    </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">开关-默认开</label>
-        <div class="layui-input-block">
-            <input type="checkbox" checked="" name="open" lay-skin="switch" lay-filter="switchTest" lay-text="ON|OFF">
-        </div>
-    </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">单选框</label>
-        <div class="layui-input-block">
-            <input type="radio" name="sex" value="男" title="男" checked="">
-            <input type="radio" name="sex" value="女" title="女">
-            <input type="radio" name="sex" value="禁" title="禁用" disabled="">
-        </div>
-    </div>
-    <div class="layui-form-item layui-form-text">
-        <label class="layui-form-label">普通文本域</label>
-        <div class="layui-input-block">
-            <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
-        </div>
-    </div>
-    <div class="layui-form-item layui-form-text">
-        <label class="layui-form-label">编辑器</label>
-        <div class="layui-input-block">
-            <textarea class="layui-textarea layui-hide" name="content" lay-verify="content"
-                      id="LAY_demo_editor"></textarea>
-        </div>
-    </div>
-    <div class="layui-form-item">
-        <div class="layui-input-block">
-            <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
-            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
-        </div>
-    </div>
-</form>
-
-<script src="//res.layui.com/layui/dist/layui.js" charset="utf-8"></script>
-<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
-<script>
-    layui.use(['form', 'layedit', 'laydate'], function () {
-        var form = layui.form
-            , layer = layui.layer
-            , layedit = layui.layedit
-            , laydate = layui.laydate;
-
-        //日期
-        laydate.render({
-            elem: '#date'
-        });
-        laydate.render({
-            elem: '#date1'
-        });
-
-        //创建一个编辑器
-        var editIndex = layedit.build('LAY_demo_editor');
-
-        //自定义验证规则
-        form.verify({
-            title: function (value) {
-                if (value.length < 5) {
-                    return '标题至少得5个字符啊';
-                }
-            }
-            , pass: [/(.+){6,12}$/, '密码必须6到12位']
-            , content: function (value) {
-                layedit.sync(editIndex);
-            }
-        });
-
-        //监听指定开关
-        form.on('switch(switchTest)', function (data) {
-            layer.msg('开关checked：' + (this.checked ? 'true' : 'false'), {
-                offset: '6px'
-            });
-            layer.tips('温馨提示：请注意开关状态的文字可以随意定义，而不仅仅是ON|OFF', data.othis)
-        });
-
-        //监听提交
-        form.on('submit(demo1)', function (data) {
-            layer.alert(JSON.stringify(data.field), {
-                title: '最终的提交信息'
-            })
-            return false;
-        });
-
-
-    });
-</script>
-
+        </div><!-- PAGE CONTENT ENDS -->
+    </div><!-- /.col -->
+</div><!-- /.row -->
 </body>
 </html>

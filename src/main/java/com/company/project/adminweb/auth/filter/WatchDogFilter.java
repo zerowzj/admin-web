@@ -26,9 +26,9 @@ public class WatchDogFilter extends OncePerRequestFilter {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(WatchDogFilter.class);
 
-    private static final String REQUEST_ID = "Request-Id";
+    private static final String REQUEST_ID_NAME = "Request-Id";
 
-    private static final String MDC_REQUEST_ID = "request_id";
+    private static final String REQUEST_ID = "request_id";
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
@@ -43,12 +43,12 @@ public class WatchDogFilter extends OncePerRequestFilter {
         Stopwatch stopwatch = Stopwatch.createStarted();
         try {
             //
-            String requestId = request.getHeader(REQUEST_ID);
+            String requestId = request.getHeader(REQUEST_ID_NAME);
             if (Strings.isNullOrEmpty(requestId)) {
                 requestId = String.valueOf(UUID.randomUUID().hashCode() & 0x7fffffff);
             }
             TrackKey.set(requestId);
-            MDC.put(MDC_REQUEST_ID, requestId);
+            MDC.put(REQUEST_ID, requestId);
             //继续执行
             filterChain.doFilter(request, response);
         } finally {

@@ -23,8 +23,8 @@ import java.lang.annotation.Target;
 public @interface Api {
 
     @AliasFor("path")
-    String[] value() default {};
+    String[] value() default {"/api"};
 
     @AliasFor("value")
-    String[] path() default {};
+    String[] path() default {"/api"};
 }

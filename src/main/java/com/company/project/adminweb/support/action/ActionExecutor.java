@@ -40,10 +40,10 @@ public class ActionExecutor {
      */
     public static Map<String, Object> execute(HttpServletRequest request, HttpServletResponse response,
                                               String name) {
-        if (!SpringContext.containsBean(name)) {
+        Action action = SpringContext.getBean(name, Action.class);
+        if (action == null) {
             throw new IllegalStateException("Bean不存在");
         }
-        Action action = SpringContext.getBean(name, Action.class);
         return action.doExecute(request, response);
     }
 }

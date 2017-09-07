@@ -3,7 +3,7 @@
     <!-- ========== -->
     <!--    装饰    -->
     <!-- ========== -->
-    <mapping path="/role/**" decorator="/index.jsp"/>
+    <mapping path="/**" decorator="/index.jsp"/>
 
     <!-- ========== -->
     <!--    排除    -->

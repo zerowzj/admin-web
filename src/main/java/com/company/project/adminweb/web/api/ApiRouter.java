@@ -20,7 +20,7 @@ public class ApiRouter {
 
     private static final String ACTION_PREFIX = "action";
 
-    @Action("/${module}/${action}")
+    @Action("/{module}/{action}")
     public Map<String, Object> route(@PathVariable String module, @PathVariable String action,
                                      HttpServletRequest request, HttpServletResponse response) {
         String actionName = Joiner.on("_").join(ACTION_PREFIX, module, action);

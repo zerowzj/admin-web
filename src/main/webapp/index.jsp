@@ -38,9 +38,9 @@
     </div>
 
     <div class="layui-side layui-bg-black">
-        <div class="layui-side-scroll">
+        <div class="layui-side-scroll ">
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+            <ul class="layui-nav layui-nav-tree">
 
                 <myTag:menu/>
 
@@ -57,7 +57,7 @@
 
     <div class="layui-body">
         <!-- 内容主体区域 -->
-        <div style="padding: 150px;"><sitemesh:write property="body"/></div>
+        <div style="padding: 15px;"><sitemesh:write property="body"/></div>
     </div>
 
     <div class="layui-footer">

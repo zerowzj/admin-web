@@ -57,7 +57,7 @@
 
     <div class="layui-body">
         <!-- 内容主体区域 -->
-        <div style="padding: 15px;"><sitemesh:write property="body"/></div>
+        <div style="padding: 150px;"><sitemesh:write property="body"/></div>
     </div>
 
     <div class="layui-footer">

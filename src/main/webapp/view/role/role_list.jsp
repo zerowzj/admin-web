@@ -9,7 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body>
-
+<ul class="layui-tab-title site-demo-title">
+    <li class="layui-this">预览</li>
+    <li>查看代码</li>
+    <li>帮助</li>
+</ul>
 <div class="layui-form">
     <form class="layui-form" id="_form" action="#" method="post">
         <div class="layui-form-item">

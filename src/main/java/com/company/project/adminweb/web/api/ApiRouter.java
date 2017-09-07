@@ -27,7 +27,7 @@ public class ApiRouter {
         return ActionExecutor.execute(request, response, actionName);
     }
 
-    @Action("/${action}")
+    @Action("/{action}")
     public Map<String, Object> route_(@PathVariable String action,
                                       HttpServletRequest request, HttpServletResponse response) {
         String actionName = Joiner.on("_").join(ACTION_PREFIX, action);

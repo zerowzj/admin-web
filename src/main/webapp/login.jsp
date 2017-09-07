@@ -29,14 +29,6 @@
                        class="layui-input">
             </div>
             <div class="layui-form-item">
-                <label class="beg-login-icon">
-                    <i class="layui-icon">&#xe642;</i>
-                </label>
-                <input type="password" name="loginPwd" lay-verify="loginPwd" autocomplete="off" placeholder="验证码"
-                       class="layui-input">
-            </div>
-            <div class="layui-form-item">
-
                 <div class="beg-pull-right">
                     <button class="layui-btn layui-btn-primary" lay-submit lay-filter="login">
                         <i class="layui-icon"></i> 登录

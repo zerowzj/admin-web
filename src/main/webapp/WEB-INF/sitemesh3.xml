@@ -4,7 +4,7 @@
     <!--    装饰    -->
     <!-- ========== -->
     <mapping path="/role/**" decorator="/index.jsp"/>
-
+    <mapping path="/tt" decorator="/index.jsp"/>
     <!-- ========== -->
     <!--    排除    -->
     <!-- ========== -->

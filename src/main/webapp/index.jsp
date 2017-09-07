@@ -13,7 +13,7 @@
         layui.use('element', function () {
         });
     </script>
-    <base target="_parent" />
+    <base target="_parent"/>
 </head>
 <body>
 <div class="layui-layout layui-layout-admin">
@@ -21,7 +21,6 @@
         <div class="layui-logo">管理平台</div>
         <!-- 头部区域（可配合layui已有的水平导航） -->
         <ul class="layui-nav layui-layout-left">
-
         </ul>
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
@@ -37,6 +36,7 @@
             <li class="layui-nav-item"><a href="/logout">注销</a></li>
         </ul>
     </div>
+
     <div class="layui-side layui-bg-black">
         <div class="layui-side-scroll">
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
@@ -44,7 +44,7 @@
 
                 <myTag:menu/>
 
-                <li class="layui-nav-item">
+                <li class="layui-nav-item layui-nav-itemed">
                     <a href="javascript:;">安全管理</a>
                     <dl class="layui-nav-child">
                         <dd><a href="javascript:;">修改密码</a></dd>
@@ -54,10 +54,12 @@
             </ul>
         </div>
     </div>
+
     <div class="layui-body">
         <!-- 内容主体区域 -->
         <div style="padding: 15px;"><sitemesh:write property="body"/></div>
     </div>
+
     <div class="layui-footer">
         <!-- 底部固定区域 -->
         © layui.com - 底部固定区域

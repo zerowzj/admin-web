@@ -1,6 +1,6 @@
 package com.company.project.adminweb.dao.popedomrole;
 
-import com.company.project.adminweb.common.db.BaseEO;
+import com.company.project.adminweb.dao.BaseEO;
 
 import java.util.Date;
 

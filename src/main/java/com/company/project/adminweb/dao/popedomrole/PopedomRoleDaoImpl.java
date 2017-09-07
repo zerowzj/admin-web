@@ -1,6 +1,6 @@
 package com.company.project.adminweb.dao.popedomrole;
 
-import com.company.project.adminweb.common.db.BaseDaoImpl;
+import com.company.project.adminweb.dao.BaseDaoImpl;
 import com.github.miemiedev.mybatis.paginator.domain.PageBounds;
 import com.github.miemiedev.mybatis.paginator.domain.PageList;
 import com.google.common.collect.Maps;

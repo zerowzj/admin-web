@@ -1,7 +1,7 @@
 package com.company.project.adminweb.dao.popedomfunction;
 
 
-import com.company.project.adminweb.common.db.BaseDao;
+import com.company.project.adminweb.dao.BaseDao;
 
 import java.util.List;
 

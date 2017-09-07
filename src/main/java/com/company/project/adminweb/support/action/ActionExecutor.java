@@ -14,7 +14,7 @@ import java.util.Map;
 public class ActionExecutor {
 
     /**
-     * 执行
+     * 执行Action
      *
      * @param request  Http请求
      * @param response Http响应
@@ -31,7 +31,7 @@ public class ActionExecutor {
     }
 
     /**
-     * 执行
+     * 执行Action
      *
      * @param request  Http请求
      * @param response Http响应

@@ -1,4 +1,4 @@
-package com.company.project.adminweb.common.db;
+package com.company.project.adminweb.dao;
 
 import java.io.Serializable;
 

@@ -1,6 +1,6 @@
 package com.company.project.adminweb.dao.popedomfunction;
 
-import com.company.project.adminweb.common.db.BaseDaoImpl;
+import com.company.project.adminweb.dao.BaseDaoImpl;
 import com.google.common.collect.Maps;
 import org.springframework.stereotype.Repository;
 

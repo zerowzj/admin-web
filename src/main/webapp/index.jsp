@@ -13,7 +13,7 @@
         layui.use('element', function () {
         });
     </script>
-    <base target="_self" />
+    <base target="_parent" />
 </head>
 <body>
 <div class="layui-layout layui-layout-admin">
@@ -48,7 +48,7 @@
                     <a href="javascript:;">安全管理</a>
                     <dl class="layui-nav-child">
                         <dd><a href="javascript:;">修改密码</a></dd>
-                        <dd><a href="http://www.baidu.com/tt" target="_self">修改密码</a></dd>
+                        <dd><a href="http://www.baidu.com/">修改密码</a></dd>
                     </dl>
                 </li>
             </ul>

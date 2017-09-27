@@ -39,7 +39,7 @@
         </form>
     </div>
     <footer>
-        <p>Beginner © www.zhengjinfan.cn</p>
+        <p>xxxxx</p>
     </footer>
 </div>
 </body>

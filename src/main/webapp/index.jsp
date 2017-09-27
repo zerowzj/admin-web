@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title><sitemesh:write property="title"/></title>
     <link rel="stylesheet" href="/static/layui/css/layui.css">
-    <script src="/static/layui/layui.js"></script>
+    <script type="text/java" src="/static/layui/layui.js"></script>
     <script>
         //JavaScript代码区域
         layui.use('element', function () {

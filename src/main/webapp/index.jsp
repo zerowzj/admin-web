@@ -7,13 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title><sitemesh:write property="title"/></title>
     <link rel="stylesheet" href="/static/layui/css/layui.css">
-    <script type="text/java" src="/static/layui/layui.js"></script>
+    <script src="/static/layui/layui.js"></script>
     <script>
         //JavaScript代码区域
         layui.use('element', function () {
         });
     </script>
-    <base target="_parent"/>
 </head>
 <body>
 <div class="layui-layout layui-layout-admin">
@@ -41,9 +40,7 @@
         <div class="layui-side-scroll ">
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
             <ul class="layui-nav layui-nav-tree">
-
                 <myTag:menu/>
-
                 <li class="layui-nav-item layui-nav-itemed">
                     <a href="javascript:;">安全管理</a>
                     <dl class="layui-nav-child">
@@ -56,8 +53,15 @@
     </div>
 
     <div class="layui-body">
-        <!-- 内容主体区域 -->
-        <div style="padding: 15px;"><sitemesh:write property="body"/></div>
+        <div class="layui-container">
+            <div class="layui-row">
+
+                <!-- 内容主体区域 -->
+                <div style="padding: 15px;">
+                    <sitemesh:write property="body"/>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="layui-footer">

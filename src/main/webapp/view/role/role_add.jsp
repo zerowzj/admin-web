@@ -9,20 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body>
-
 <div class="layui-row">
-    <fieldset class="layui-elem-field layui-field-title">
-        <legend>
-        <span class="layui-breadcrumb">
-            <a href="">权限管理</a>
-            <a><cite>新增角色</cite></a>
-        </span>
-        </legend>
-    </fieldset>
-</div>
-<div class="layui-row">
-
-
     <form class="layui-form" action="">
         <div class="layui-form-item">
             <label class="layui-form-label">输入框</label>

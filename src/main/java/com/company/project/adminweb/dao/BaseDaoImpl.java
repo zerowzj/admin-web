@@ -13,6 +13,8 @@ import java.io.Serializable;
  */
 public abstract class BaseDaoImpl<E extends BaseEO> extends SqlSessionDaoSupport implements BaseDao<E> {
 
+    private static final String DOT = ".";
+
     private static final String SQL_ID_INSERT = "insert";
 
     private static final String SQL_ID_DELETE = "delete";
@@ -56,7 +58,7 @@ public abstract class BaseDaoImpl<E extends BaseEO> extends SqlSessionDaoSupport
      * @return String
      */
     protected final String getSqlId(String sqlId) {
-        return this.getClass().getPackage().getName() + "." + sqlId;
+        return this.getClass().getPackage().getName() + DOT + sqlId;
     }
 
     @Override

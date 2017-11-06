@@ -13,30 +13,38 @@ import java.io.Serializable;
  */
 public abstract class BaseDaoImpl<E extends BaseEO> extends SqlSessionDaoSupport implements BaseDao<E> {
 
+    private static final String SQL_ID_INSERT = "insert";
+
+    private static final String SQL_ID_DELETE = "delete";
+
+    private static final String SQL_ID_UPDATE = "update";
+
+    private static final String SQL_ID_GET = "get";
+
     @Override
     public final E insert(final E entity) {
-        String sqlId = getSqlId("insert");
+        String sqlId = getSqlId(SQL_ID_INSERT);
         int count = getSqlSession().insert(sqlId, entity);
         return entity;
     }
 
     @Override
     public final int delete(final Serializable id) {
-        String sqlId = getSqlId("delete");
+        String sqlId = getSqlId(SQL_ID_DELETE);
         int count = getSqlSession().delete(sqlId, id);
         return count;
     }
 
     @Override
     public final int update(final E entity) {
-        String sqlId = getSqlId("update");
+        String sqlId = getSqlId(SQL_ID_UPDATE);
         int count = getSqlSession().update(sqlId, entity);
         return count;
     }
 
     @Override
     public final E get(final Serializable id) {
-        String sqlId = getSqlId("get");
+        String sqlId = getSqlId(SQL_ID_GET);
         E entity = getSqlSession().selectOne(sqlId, id);
         return entity;
     }
